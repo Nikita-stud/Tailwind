@@ -8,21 +8,57 @@
   <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/style.css"/>
 </head>
-<body>
-  <header class="sticky w-100 bg-pink-950">
-    <div class="">
+<body class="bg-gradient-to-b from-violet-300 to-orange-50 min-h-screen grid grid-rows-[auto_1fr_auto]">
+  <header class="w-100 h-20 flex justify-between">
+    <div class="py-6 px-10">
+      <a href="/" class="w-fit h-fit">
+        <img src="../images/logo.png" alt="The logo of the page NOWOW">
+      </a>
+    </div>
+    <div class="w-100 p-5">
+      <form action="" method="POST">
+        <label for=""></label>
+        <input type="search" class="pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
+      </form> 
+    </div>
+    <div class="text-xl py-6 px-10 flex flex-row justify-end">
       <nav class="">
-        <ul class="flex flex-row justify-center items-center gap-8 p-2 text-stone-100 ">
-          <li class="text-2xl text-slate-900"><a href="#" class=""><i class="w-8 text-xl fa-solid fa-envelopes-bulk"></i> Feed</a></li>
-          <li class="text-2xl hover:text-slate-900"><a href="/"><i class="w-6 text-xl fa-solid fa-fingerprint"></i> Authentication</a></li>
-          <li class="text-2xl hover:text-slate-900"><a href="../profile/index.html"><i class="w-6 text-xl fa-solid fa-user"></i> Profile</a></li>
+        <ul class="flex gap-5 pr-5">
+          <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
         </ul>
       </nav>
+      <a href="../profile/index.html">Hi, <span class="underline text-blue">George</span></a>
     </div>
   </header>
 
   <main class="">
-    <h1 class="text-3xl my-10 mx-10 font-serif">Feed Page</h1>
+
+    <div class="text-2xl w-fit p-10 m-10 shadow-md rounded-xl bg-slate-50">
+      <nav class="flex align-top">
+        <ul class="flex flex-col gap-3">
+          <li><a href="#"><i class="fa-solid fa-book pr-1"></i> Feed</a></li>
+          <li><a href="#"><i class="fa-solid fa-user-group text-xl pr-0"></i> Friends</a></li>
+          <li><a href="#"><i class="fa-solid fa-bookmark pr-1"></i> Saved</a></li>
+          <li><a href="#"><i class="fa-solid fa-globe"></i> Explore</a></li>
+        </ul>
+      </nav>
+      <nav class="pt-10">
+        <ul class="flex flex-col gap-3">
+          <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
+          <li><a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="text-2xl w-fit p-10  bg-slate-50 shadow-md">
+      <div class="border-spacing-1 ">
+
+      </div>
+    </div>
+
+    <div class=""></div>
+
 
     <div class="grid">
       <div class="b">
@@ -34,15 +70,11 @@
 
   </main>
 
-  <footer class="">
-    <div class="flex flex-col py-20 pl-10 text-stone-100 bg-pink-950">
-      <nav class="">
-        <ul class="">
-          <li class="text-2xl mb-4 hover:text-slate-900"><a href="./feed/index.html" class=""><i class="w-8 text-xl fa-solid fa-envelopes-bulk"></i> Feed</a></li>
-          <li class="text-2xl mb-4 hover:text-slate-900"><a href="/"><i class="w-6 text-xl fa-solid fa-fingerprint"></i> Authentication</a></li>
-          <li class="text-2xl hover:text-slate-900"><a href="./profile/index.html"><i class="w-6 text-xl fa-solid fa-user"></i> Profile</a></li>
-        </ul>
-      </nav>
+  <footer class="w-100 h-20 flex justify-end">
+    <div class="py-6 px-10">
+      <a href="/" class="w-fit h-fit">
+        <img src="../images/logo.png" alt="The logo of the page NOWOW">
+      </a>
     </div>
   </footer>
 </body>

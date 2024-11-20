@@ -8,11 +8,28 @@
   <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/style.css"/>
 </head>
-<body>
-  <header class="w-100 h-20 p-6 bg-red-900">
-    <a href="/" class="w-fit h-fit">
-      <img src="../images/logo.png" alt="The logo of the page NOWOW">
-    </a>
+<body class="bg-gradient-to-b from-violet-300 to-orange-50 min-h-screen grid grid-rows-[auto_1fr_auto]">
+  <header class="w-100 h-20 flex justify-between">
+    <div class="py-6 px-10">
+      <a href="/" class="w-fit h-fit">
+        <img src="../images/logo.png" alt="The logo of the page NOWOW">
+      </a>
+    </div>
+    <div class="w-100 p-5">
+      <form action="" method="POST">
+        <label for=""></label>
+        <input type="search" class="pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
+      </form> 
+    </div>
+    <div class="text-xl py-6 px-10 flex flex-row justify-end">
+      <nav class="">
+        <ul class="flex gap-5 pr-5">
+          <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+        </ul>
+      </nav>
+      <a href="../profile/index.html">Hi, <span class="underline text-blue">George</span></a>
+    </div>
   </header>
 
   <main class="">
@@ -21,17 +38,12 @@
 
   </main>
 
-  <footer class="w-100 h-20 p-6 flex align-middle justify-end bg-red-800">
-    <div class="flex flex-row">
-      <nav class="">
-        <ul class="">
-          <li><a href="/" class="w-fit h-fit"><img src="../images/logo.png" alt="The logo of the page NOWOW"></a></li>
-          <li class="text-2xl mb-4 hover:text-slate-900"><a href="./feed/index.html" class=""><i class="w-8 text-xl fa-solid fa-envelopes-bulk"></i> Feed</a></li>
-          <li class="text-2xl hover:text-slate-900"><a href="./profile/index.html"><i class="w-6 text-xl fa-solid fa-user"></i> Profile</a></li>
-        </ul>
-      </nav>
+  <footer class="w-100 h-20 flex justify-end">
+    <div class="py-6 px-10">
+      <a href="/" class="w-fit h-fit">
+        <img src="../images/logo.png" alt="The logo of the page NOWOW">
+      </a>
     </div>
   </footer>
-
 </body>
 </html>
