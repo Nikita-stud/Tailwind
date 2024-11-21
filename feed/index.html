@@ -33,43 +33,69 @@
   </header>
 
   <main class="">
-
-    <div class="text-2xl w-fit p-10 m-10 shadow-md rounded-xl bg-slate-50">
-      <nav class="flex align-top">
-        <ul class="flex flex-col gap-3">
-          <li><a href="#"><i class="fa-solid fa-book pr-1"></i> Feed</a></li>
-          <li><a href="#"><i class="fa-solid fa-user-group text-xl pr-0"></i> Friends</a></li>
-          <li><a href="#"><i class="fa-solid fa-bookmark pr-1"></i> Saved</a></li>
-          <li><a href="#"><i class="fa-solid fa-globe"></i> Explore</a></li>
-        </ul>
-      </nav>
-      <nav class="pt-10">
-        <ul class="flex flex-col gap-3">
-          <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
-          <li><a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="text-2xl w-fit p-10  bg-slate-50 shadow-md">
-      <div class="border-spacing-1 ">
-
+    <section class="flex p-10 gap-10">
+      <div>
+        <div>
+          <div class="text-2xl w-max p-10 shadow-md rounded-xl bg-slate-50">
+            <nav class="flex align-top">
+              <ul class="flex flex-col gap-3">
+                <li><a href="#"><i class="fa-solid fa-book pr-1"></i> Feed</a></li>
+                <li><a href="#"><i class="fa-solid fa-user-group text-xl pr-0"></i> Friends</a></li>
+                <li><a href="#"><i class="fa-solid fa-bookmark pr-1"></i> Saved</a></li>
+                <li><a href="#"><i class="fa-solid fa-globe"></i> Explore</a></li>
+              </ul>
+            </nav>
+            <nav class="pt-10">
+              <ul class="flex flex-col gap-3">
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="text-xl w-full mt-5 p-10 shadow-md rounded-xl bg-slate-50">
+          <form action="" method="POST">
+            <div>
+              <input type="checkbox" id="global" class="w-4 h-4 border-black">
+              <label for="global">Global Posts</label>
+            </div>
+            <div>
+              <input type="checkbox" id="friends" class="w-4 h-4 border-black">
+              <label for="friends">Friends Posts</label>
+            </div>
+            <div>
+              <input type="checkbox" id="todays" class="w-4 h-4 border-black">
+              <label for="todays">Todays Posts</label>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class=""></div>
+      <div class="w-100">
+        <div class="text-2xl mb-5 w-100 bg-slate-50 shadow-md rounded-xl">
+          <div class="p-10">
+                <p class="">The feed page should have a list of posts thumbnails, a search bar, sort options and a form to create a new post.</p>
 
+          </div>
+        </div>
 
-    <div class="grid">
-      <div class="b">
-        <h3>Post 1</h3>
+        <div class="flex flex-col gap-5 ">
+          <article class="p-10 w-100 bg-slate-50 shadow-md rounded-xl">
+            <h3 class="text-2xl pb-5">Embrace the Magic of Everyday Moments</h3>
+            <p>In our fast-paced lives, it's easy to overlook the beauty in the ordinary. Whether it's the warmth of a morning cup of coffee, the laughter shared with friends, or the vibrant colors of a sunset, these small moments have the power to fill our hearts with joy. Take a moment today to pause, breathe, and appreciate the magic that surrounds you. What little thing brings you joy today? Share in the comments!</p>
+          </article>
+          <article class="p-10 w-100 bg-slate-50 shadow-md rounded-xl">
+            <h3 class="text-2xl pb-5">Embrace the Journey</h3>
+            <p>Life is a beautiful tapestry woven from our experiences, both big and small. Every stumble and triumph shapes who we are and propels us forward. Remember, its not just the destination that matters, but the adventures and lessons learned along the way. So take that leap, explore new horizons, and cherish the moments that make your heart smile. Whats one journey youre grateful for today? Share it with us!</p>
+          </article>
+          <article class="p-10 w-100 bg-slate-50 shadow-md rounded-xl">
+            <h3 class="text-2xl pb-5">Embracing Change</h3>
+            <p>Change is the only constant in life, yet it can be daunting. Whether its starting a new job, moving to a different city, or simply trying a new hobby, embracing change can lead to incredible growth and unexpected opportunities. Remember, every challenge is a chance to learn something new about yourself. So, the next time you face a shift in your routine, lean into it! What change are you embracing today? Share in the comments!</p>
+          </article>
+        </div>
       </div>
-    </div>
-
-    <p class="mx-10 mb-20">The feed page should have a list of posts thumbnails, a search bar, sort options and a form to create a new post.</p>
-
+    </section>
   </main>
-
   <footer class="w-100 h-20 flex justify-end">
     <div class="py-6 px-10">
       <a href="/" class="w-fit h-fit">
