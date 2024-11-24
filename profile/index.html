@@ -32,9 +32,9 @@
       <div class="w-100">
 
         <div>
-          <div class="flex gap-5 mb-5 p-10 w-100 bg-slate-50 shadow-md rounded-xl">
-            <img src="../images/profile.jpg" alt="profile image of the user" class="w-32 h-32 rounded-full">
-            <div class="flex flex-col gap-5 px-5">
+          <div class="grid place-content-center md:flex flex-row gap-5 mb-5 p-10 w-100 bg-slate-50 shadow-md rounded-xl">
+            <img src="../images/profile.jpg" alt="profile image of the user" class="m-auto md:m-0 w-32 h-32 rounded-full">
+            <div class="inline md:flex flex-col gap-5 px-5">
               <p><span class="font-bold text-2xl">User: </span><span class="pl-8 text-xl">George1o1</span></p>
               <p><span class="font-bold text-2xl">Name: </span><span class="pl-5 text-xl">George Wesp</span></p>
               <p><span class="font-bold text-2xl">Age: </span><span class="pl-11 text-xl">26</span></p>
@@ -65,21 +65,27 @@
           <div class="p-10 w-100 bg-slate-50 shadow-md rounded-xl">
             <div class="flex flex-col gap-10 mb-5">
               <h2 class="text-3xl font-serif -mb-3">Friends List</h2>
-              <div class="relative">
+              <div class="flex justify-center gap-2 align-middle md:inline">
                 <nav>
                   <ul>
                     <div class="relative">
-                      <li class="text-xl">Jackson Junius <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
-                      <button class="absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
-                      <button class="absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Unfollow</button>                    </div>
+                      <li class="flex justify-center gap-2 text-xl md:inline">Jackson Junius <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
+                      <div>
+                        <button class="md:absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
+                        <button class="md:absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Unfollow</button>                
+                      </div>
                     <div class="relative">
-                      <li class="text-xl">Alex Federman <span><i class="fa-regular fa-circle text-xs text-lime-600"></i></span></li>
-                      <button class="absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
-                      <button class="absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Unfollow</button>                    </div>
+                      <li class="flex justify-center gap-2 text-xl md:inline">Alex Federman <span><i class="fa-regular fa-circle text-xs text-lime-600"></i></span></li>
+                      <div>
+                        <button class=" md:absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
+                        <button class=" md:absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Unfollow</button>                  
+                      </div> 
                     <div class="relative">
-                      <li class="text-xl">Georg Bora <span><i class="fa-regular fa-circle text-xs text-lime-600"></i></span></li>
-                      <button class="absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
-                      <button class="absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Unfollow</button>
+                      <li class="flex justify-center gap-2 text-xl md:inline">Georg Bora <span><i class="fa-regular fa-circle text-xs text-lime-600"></i></span></li>
+                      <div>
+                        <button class="md:absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
+                        <button class="md:absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Unfollow</button>
+                      </div>
                     </div>
                   </ul>
                 </nav>
@@ -87,21 +93,29 @@
               <div>
                 <h2 class="text-3xl font-serif mb-5">You Might Also Know</h2>
                 <div class="flex flex-col gap-10">
-                  <div class="relative">
+                  <div class="flex justify-center align-middle md:inline">
                     <nav>
                       <ul>
                         <div class="relative">
-                          <li class="text-xl">Vreng Shaib <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
-                          <button class="absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
-                          <button class="absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Follow</button>                    </div>
+                          <li class="flex justify-center gap-2 text-xl md:inline">Vreng Shaib <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
+                          <div>
+                            <button class="md:absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
+                            <button class="md:absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Follow</button>  
+                          </div>
+                        </div>
                         <div class="relative">
-                          <li class="text-xl">Neruhy Huius <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
-                          <button class="absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
-                          <button class="absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Follow</button>                    </div>
+                          <li class="flex justify-center gap-2 text-xl md:inline">Neruhy Huius <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
+                          <div>
+                            <button class="md:absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
+                            <button class="md:absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Follow</button>    
+                          </div>
+                        </div>
                         <div class="relative">
-                          <li class="text-xl">Kui Brorb <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
-                          <button class="absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
-                          <button class="absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Follow</button>
+                          <li class="flex justify-center gap-2 text-xl md:inline">Kui Brorb <span><i class="fa-solid fa-circle text-xs text-lime-600"></i></span></li>
+                          <div>
+                            <button class="md:absolute text-sm border border-sky-600 left-52 -top-0 py-0.5 px-8  text-sky-600 rounded-full">View</button>
+                            <button class="md:absolute text-sm border border-s-amber-50 left-80 -top-0 py-0.5 px-8 bg-sky-600 text-cyan-50 rounded-full">Follow</button>
+                          </div>
                         </div>
                       </ul>
                     </nav>
