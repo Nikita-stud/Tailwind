@@ -56,15 +56,15 @@
         <div class="text-xl w-full mt-5 p-10 shadow-md rounded-xl bg-slate-50">
           <form action="" method="POST">
             <div>
-              <input type="checkbox" id="global" class="w-4 h-4 border-black">
+              <input type="radio" id="global" name="radio" class="w-4 h-4 border-black">
               <label for="global">Global Posts</label>
             </div>
             <div>
-              <input type="checkbox" id="friends" class="w-4 h-4 border-black">
+              <input type="radio" id="friends" name="radio" class="w-4 h-4 border-black">
               <label for="friends">Friends Posts</label>
             </div>
             <div>
-              <input type="checkbox" id="todays" class="w-4 h-4 border-black">
+              <input type="radio" id="todays" name="radio" class="w-4 h-4 border-black">
               <label for="todays">Todays Posts</label>
             </div>
           </form>
@@ -76,7 +76,7 @@
         <div>
           <form action="" method="POST" class="flex gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
             <img src="../images/profile.jpg" alt="profile image of the user" class="w-14 h-14 rounded-full">
-            <textarea name="post" id="post" rows="1" cols="10" class="w-full h- pl-2 pt-3 rounded-xl bg-slate-50 border border-black" placeholder="What is on your mind George?"></textarea>
+            <textarea name="post" id="post" rows="1" cols="10" class="w-full pl-2 pt-3 rounded-xl bg-slate-50 border border-black" placeholder="What is on your mind George?"></textarea>
             <button class="bg-black text-white rounded-full mt-20 px-10 py-2 text-xl hover:bg-slate-800">Post</button>
           </form>
         </div>
