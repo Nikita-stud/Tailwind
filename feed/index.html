@@ -18,7 +18,7 @@
     <div class="w-100 p-5">
       <form action="" method="POST">
         <label for=""></label>
-        <input type="search" class="pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
+        <input type="search" class="hidden md:block pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
       </form> 
     </div>
     <div class="text-xl py-6 px-10 flex flex-row justify-end">
@@ -33,39 +33,43 @@
   </header>
 
   <main class="">
-    <section class="flex p-10 gap-10">
+    <section class="md:flex p-10 gap-10">
+      <form action="" method="POST" class="flex align-middle justify-center mb-5">
+        <label for=""></label>
+        <input type="search" class="md:hidden pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-xl" placeholder="Search">
+      </form> 
       <div>
         <div>
-          <div class="text-2xl w-max p-10 shadow-md rounded-xl bg-slate-50">
-            <nav class="flex align-top">
-              <ul class="flex flex-col gap-3">
+          <div class="text-xl flex gap-5 md:text-2xl md:flex-col w-max p-10 shadow-md rounded-xl bg-slate-50">
+            <nav class="md:flex md:align-top">
+              <ul class="flex md:flex-col gap-3">
                 <li><a href="#"><i class="fa-solid fa-book pr-1"></i> Feed</a></li>
                 <li><a href="#"><i class="fa-solid fa-user-group text-xl pr-0"></i> Friends</a></li>
                 <li><a href="#"><i class="fa-solid fa-bookmark pr-1"></i> Saved</a></li>
                 <li><a href="#"><i class="fa-solid fa-globe"></i> Explore</a></li>
               </ul>
             </nav>
-            <nav class="pt-10">
-              <ul class="flex flex-col gap-3">
+            <nav class=" md:pt-10">
+              <ul class="flex md:flex-col gap-3">
                 <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
                 <li><a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
               </ul>
             </nav>
           </div>
         </div>
-        <div class="text-xl w-full mt-5 p-10 shadow-md rounded-xl bg-slate-50">
-          <form action="" method="POST">
+        <div class="mb-5 md:mb-0 text-xl w-full mt-5 p-10 shadow-md rounded-xl bg-slate-50">
+          <form action="" method="POST" class="flex justify-between md:flex-col">
             <div>
               <input type="radio" id="global" name="radio" class="w-4 h-4 border-black">
-              <label for="global">Global Posts</label>
+              <label for="global" class="cursor-pointer">Global Posts</label>
             </div>
             <div>
               <input type="radio" id="friends" name="radio" class="w-4 h-4 border-black">
-              <label for="friends">Friends Posts</label>
+              <label for="friends" class="cursor-pointer">Friends Posts</label>
             </div>
             <div>
               <input type="radio" id="todays" name="radio" class="w-4 h-4 border-black">
-              <label for="todays">Todays Posts</label>
+              <label for="todays" class="cursor-pointer">Todays Posts</label>
             </div>
           </form>
         </div>
