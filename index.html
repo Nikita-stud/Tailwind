@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CA | Authentication Page</title>
+  <meta name="description" content="This is the Authentication Page that is build as a task for Noroff University only using Frameworks or rather Tailwind. There are no functional links available">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="min-h-screen grid grid-rows-[auto_1fr_auto] w-full h-full bg-no-repeat bg-cover" style="background-image: url('/images/aut-big.jpg');">
+
+  <header class="w-100 h-20 p-6">
+    <a href="/" class="w-fit h-fit">
+      <img src="images/logo.png" alt="The logo of the page NOWOW">
+    </a>
+  </header>
+
+  <main class="grid place-items-center">
+    <section class="">
+      <div class="w-full">
+        <h1 class="text-3xl font-sans flex justify-center pb-6">Welcome</h1>
+  
+        <div class="">
+          <form action="/feed/index.html" method="POST" class="flex flex-col">
+            <div class="flex flex-col">
+              <label for="email" class=""></label>
+              <input type="email" id="email" name="email" placeholder="E-Mail" class="pl-5 h-10 w-100 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full">
+            </div>
+            <div class="flex flex-col">
+              <label for="subject" class="mt-5"></label>
+              <input type="password" id="subject" name="subject" placeholder="Password" class="pl-5 h-10 w-100 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" required minlength="8">
+            </div>
+            <div class="flex">
+              <button window.location.href="profile/index.html" class="w-full mt-5 text-1xl pl- h-10 bg-black text-white hover:text-slate-100 rounded-full">SIGN IN</button>
+            </div>
+          </form>
+        </div>
+          <a href="#" class="flex justify-end">
+            <p class="underline text-xs text-blue pt-4 pr-4">Create new account</p>
+          </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-100 h-20 p-6 flex justify-end">
+    <a href="/" class="w-fit h-fit">
+      <img src="images/logo.png" alt="The logo of the page NOWOW">
+    </a>
+  </footer>
+</body>
+</html>

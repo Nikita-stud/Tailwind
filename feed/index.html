@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CA | Feed Page</title>
+  <meta name="description" content="This is the Feed Page that is build as a task for Noroff University only using Frameworks or rather Tailwind. There are no functional links available">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body class="bg-gradient-to-b from-violet-300 to-orange-50 min-h-screen grid grid-rows-[auto_1fr_auto]">
+  <header class="w-100 h-20 flex justify-between">
+    <div class="py-6 px-10">
+      <a href="#" class="w-fit h-fit">
+        <img src="../images/logo.png" alt="The logo of the page NOWOW">
+      </a>
+    </div>
+    <div class="w-100 p-5">
+      <form action="" method="POST">
+        <label for=""></label>
+        <input type="search" class="pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
+      </form> 
+    </div>
+    <div class="text-xl py-6 px-10 flex flex-row justify-end">
+      <nav class="">
+        <ul class="flex gap-5 pr-5">
+          <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+        </ul>
+      </nav>
+      <a href="../profile/index.html">Hi, <span class="underline text-blue">George</span></a>
+    </div>
+  </header>
+
+  <main class="">
+    <section class="flex p-10 gap-10">
+      <div>
+        <div>
+          <div class="text-2xl w-max p-10 shadow-md rounded-xl bg-slate-50">
+            <nav class="flex align-top">
+              <ul class="flex flex-col gap-3">
+                <li><a href="#"><i class="fa-solid fa-book pr-1"></i> Feed</a></li>
+                <li><a href="#"><i class="fa-solid fa-user-group text-xl pr-0"></i> Friends</a></li>
+                <li><a href="#"><i class="fa-solid fa-bookmark pr-1"></i> Saved</a></li>
+                <li><a href="#"><i class="fa-solid fa-globe"></i> Explore</a></li>
+              </ul>
+            </nav>
+            <nav class="pt-10">
+              <ul class="flex flex-col gap-3">
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="text-xl w-full mt-5 p-10 shadow-md rounded-xl bg-slate-50">
+          <form action="" method="POST">
+            <div>
+              <input type="radio" id="global" name="radio" class="w-4 h-4 border-black">
+              <label for="global">Global Posts</label>
+            </div>
+            <div>
+              <input type="radio" id="friends" name="radio" class="w-4 h-4 border-black">
+              <label for="friends">Friends Posts</label>
+            </div>
+            <div>
+              <input type="radio" id="todays" name="radio" class="w-4 h-4 border-black">
+              <label for="todays">Todays Posts</label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="w-100">
+
+        <div>
+          <form action="" method="POST" class="flex gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
+            <img src="../images/profile.jpg" alt="profile image of the user" class="w-14 h-14 rounded-full">
+            <textarea name="post" id="post" rows="1" cols="10" class="w-full pl-2 pt-3 rounded-xl bg-slate-50 border border-black" placeholder="What is on your mind George?"></textarea>
+            <button class="bg-black text-white rounded-full mt-20 px-10 py-2 text-xl hover:bg-slate-800">Post</button>
+          </form>
+        </div>
+
+        <div class="flex flex-col gap-5 ">
+          <article class="p-10 w-100 bg-slate-50 shadow-md rounded-xl">
+            <h3 class="text-2xl font-serif pb-5">Embrace the Journey</h3>
+            <img src="../images/post-img.jpg" alt="Image of the post" class="object-cover bg-no-repeat w-100 h-100 pb-5">
+            <p>Life is a beautiful tapestry woven from our experiences, both big and small. Every stumble and triumph shapes who we are and propels us forward. Remember, its not just the destination that matters, but the adventures and lessons learned along the way. So take that leap, explore new horizons, and cherish the moments that make your heart smile. Whats one journey youre grateful for today? Share it with us!</p>
+          </article>
+          <article class="p-10 w-100 font-serif bg-slate-50 shadow-md rounded-xl">
+            <h3 class="text-2xl pb-5">Embrace the Magic of Everyday Moments</h3>
+            <p>In our fast-paced lives, it's easy to overlook the beauty in the ordinary. Whether it's the warmth of a morning cup of coffee, the laughter shared with friends, or the vibrant colors of a sunset, these small moments have the power to fill our hearts with joy. Take a moment today to pause, breathe, and appreciate the magic that surrounds you. What little thing brings you joy today? Share in the comments!</p>
+          </article>
+          <article class="p-10 w-100 font-serif bg-slate-50 shadow-md rounded-xl">
+            <h3 class="text-2xl pb-5">Embracing Change</h3>
+            <p>Change is the only constant in life, yet it can be daunting. Whether its starting a new job, moving to a different city, or simply trying a new hobby, embracing change can lead to incredible growth and unexpected opportunities. Remember, every challenge is a chance to learn something new about yourself. So, the next time you face a shift in your routine, lean into it! What change are you embracing today? Share in the comments!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="w-100 h-20 flex justify-end">
+    <div class="py-6 px-10">
+      <a href="#" class="w-fit h-fit">
+        <img src="../images/logo.png" alt="The logo of the page NOWOW">
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
