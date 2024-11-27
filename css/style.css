@@ -590,6 +590,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -602,8 +606,8 @@ video {
   margin-top: 1.25rem;
 }
 
-.ml-0 {
-  margin-left: 0px;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .inline {
@@ -689,6 +693,10 @@ video {
   width: max-content;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-flow-col {
   grid-auto-flow: column;
 }
@@ -717,10 +725,6 @@ video {
   place-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-end {
   justify-content: flex-end;
 }
@@ -731,6 +735,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-10 {
@@ -838,6 +846,14 @@ video {
   padding: 1.5rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -900,10 +916,6 @@ video {
   padding-right: 1.25rem;
 }
 
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
 .pt-3 {
   padding-top: 0.75rem;
 }
@@ -912,12 +924,12 @@ video {
   padding-top: 1rem;
 }
 
-.align-baseline {
-  vertical-align: baseline;
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
-.align-top {
-  vertical-align: top;
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .align-middle {
@@ -1034,28 +1046,20 @@ video {
     position: absolute;
   }
 
-  .md\:left-0 {
-    left: 0px;
-  }
-
-  .md\:float-left {
-    float: left;
-  }
-
   .md\:m-0 {
     margin: 0px;
   }
 
-  .md\:ml-0 {
-    margin-left: 0px;
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:block {
     display: block;
-  }
-
-  .md\:inline-block {
-    display: inline-block;
   }
 
   .md\:inline {
@@ -1066,32 +1070,29 @@ video {
     display: flex;
   }
 
-  .md\:flex-none {
-    flex: none;
+  .md\:hidden {
+    display: none;
   }
 
-  .md\:justify-normal {
-    justify-content: normal;
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
   }
 
   .md\:justify-start {
     justify-content: flex-start;
   }
 
-  .md\:justify-end {
-    justify-content: flex-end;
+  .md\:gap-5 {
+    gap: 1.25rem;
   }
 
-  .md\:justify-center {
-    justify-content: center;
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
-  .md\:justify-items-start {
-    justify-items: start;
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .md\:pl-11 {
@@ -1110,12 +1111,16 @@ video {
     padding-left: 2rem;
   }
 
-  .md\:align-middle {
-    vertical-align: middle;
+  .md\:pt-10 {
+    padding-top: 2.5rem;
   }
 
-  .md\:align-bottom {
-    vertical-align: bottom;
+  .md\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .md\:align-top {
+    vertical-align: top;
   }
 
   .md\:text-2xl {

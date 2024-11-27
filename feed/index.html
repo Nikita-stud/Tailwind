@@ -18,14 +18,14 @@
     <div class="w-100 p-5">
       <form action="" method="POST">
         <label for=""></label>
-        <input type="search" class="pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
+        <input type="search" class="hidden md:block pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
       </form> 
     </div>
     <div class="text-xl py-6 px-10 flex flex-row justify-end">
       <nav class="">
         <ul class="flex gap-5 pr-5">
-          <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+          <li class="hidden md:block"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+          <li class="hidden md:block"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
         </ul>
       </nav>
       <a href="../profile/index.html">Hi, <span class="underline text-blue">George</span></a>
@@ -33,39 +33,43 @@
   </header>
 
   <main class="">
-    <section class="flex p-10 gap-10">
+    <section class="px-10 md:flex md:gap-5 md:px-5 md:p">
+      <form action="" method="POST" class="flex">
+        <label for=""></label>
+        <input type="search" class="md:hidden pl-5 h-10 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-xl" placeholder="Search">
+      </form> 
       <div>
-        <div>
-          <div class="text-2xl w-max p-10 shadow-md rounded-xl bg-slate-50">
-            <nav class="flex align-top">
-              <ul class="flex flex-col gap-3">
+        <div class="hidden md:block">
+          <div class="text-xl flex gap-5 md:text-2xl md:flex-col w-max p-10 shadow-md rounded-xl bg-slate-50">
+            <nav class="md:flex md:align-top">
+              <ul class="flex md:flex-col gap-3">
                 <li><a href="#"><i class="fa-solid fa-book pr-1"></i> Feed</a></li>
                 <li><a href="#"><i class="fa-solid fa-user-group text-xl pr-0"></i> Friends</a></li>
                 <li><a href="#"><i class="fa-solid fa-bookmark pr-1"></i> Saved</a></li>
                 <li><a href="#"><i class="fa-solid fa-globe"></i> Explore</a></li>
               </ul>
             </nav>
-            <nav class="pt-10">
-              <ul class="flex flex-col gap-3">
+            <nav class=" md:pt-10">
+              <ul class="flex md:flex-col gap-3">
                 <li><a href="#"><i class="fa-solid fa-circle-question"></i> Help</a></li>
                 <li><a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
               </ul>
             </nav>
           </div>
         </div>
-        <div class="text-xl w-full mt-5 p-10 shadow-md rounded-xl bg-slate-50">
-          <form action="" method="POST">
+        <div class="grid place-content-center mb-5 md:mb-0 text-xl mt-5 p-2 shadow-md rounded-xl bg-slate-50">
+          <form action="" method="POST" class="flex justify-between flex-col">
             <div>
               <input type="radio" id="global" name="radio" class="w-4 h-4 border-black">
-              <label for="global">Global Posts</label>
+              <label for="global" class="cursor-pointer">Global Posts</label>
             </div>
             <div>
               <input type="radio" id="friends" name="radio" class="w-4 h-4 border-black">
-              <label for="friends">Friends Posts</label>
+              <label for="friends" class="cursor-pointer">Friends Posts</label>
             </div>
             <div>
               <input type="radio" id="todays" name="radio" class="w-4 h-4 border-black">
-              <label for="todays">Todays Posts</label>
+              <label for="todays" class="cursor-pointer">Todays Posts</label>
             </div>
           </form>
         </div>
@@ -74,17 +78,17 @@
       <div class="w-100">
 
         <div>
-          <form action="" method="POST" class="flex gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
-            <img src="../images/profile.jpg" alt="profile image of the user" class="w-14 h-14 rounded-full">
-            <textarea name="post" id="post" rows="1" cols="10" class="w-full pl-2 pt-3 rounded-xl bg-slate-50 border border-black" placeholder="What is on your mind George?"></textarea>
-            <button class="bg-black text-white rounded-full mt-20 px-10 py-2 text-xl hover:bg-slate-800">Post</button>
+          <form action="" method="POST" class="grid md:flex gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
+            <img src="../images/profile.jpg" alt="profile image of the user" class="hidden md:block w-14 h-14 rounded-full">
+            <textarea name="post" id="post" rows="1" cols="10" class="pb-10 md:pb-0 w-full pl-2 pt-3 rounded-xl bg-slate-50 border border-black" placeholder="What is on your mind George?"></textarea>
+            <button class="bg-black text-white rounded-full md:mt-20 px-10 py-2 text-xl hover:bg-slate-800">Post</button>
           </form>
         </div>
 
         <div class="flex flex-col gap-5 ">
           <article class="p-10 w-100 bg-slate-50 shadow-md rounded-xl">
             <h3 class="text-2xl font-serif pb-5">Embrace the Journey</h3>
-            <img src="../images/post-img.jpg" alt="Image of the post" class="object-cover bg-no-repeat w-100 h-100 pb-5">
+            <img src="../images/post-img.jpg" alt="Image of the post" class="m-auto object-cover bg-no-repeat w-100 h-100 pb-5">
             <p>Life is a beautiful tapestry woven from our experiences, both big and small. Every stumble and triumph shapes who we are and propels us forward. Remember, its not just the destination that matters, but the adventures and lessons learned along the way. So take that leap, explore new horizons, and cherish the moments that make your heart smile. Whats one journey youre grateful for today? Share it with us!</p>
           </article>
           <article class="p-10 w-100 font-serif bg-slate-50 shadow-md rounded-xl">
