@@ -123,6 +123,7 @@ const API_KEY_URL = "/auth/create-api-key";
 
 const welcomeHeader = document.getElementById("welcome_header");
 const loginContainer = document.getElementById("login_container");
+const registerContainer = document.getElementById("register_container");
 const createNewText = document.getElementById("create-acc");
 
 function toggleCreateAccount(){
@@ -130,9 +131,11 @@ function toggleCreateAccount(){
     loginContainer.classList.toggle("hidden");
     
     if(loginContainer.classList.contains("hidden")){
+        registerContainer.classList.toggle("hidden");
         welcomeHeader.innerText = "Create Account";
         createNewText.innerText = "Sign in instead"
     }else{
+        registerContainer.classList.toggle("hidden");
         welcomeHeader.innerText = "Welcome";
         createNewText.innerText = "Create new account"
     }
