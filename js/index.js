@@ -1,7 +1,37 @@
+import { getValuesFromForm } from "./helper/events/getValuesFromForm.js";
+
+
 const API_BASE = "https://v2.api.noroff.dev";
 const API_REGISTER = "/auth/register";
 const API_LOGIN = "/auth/login";
 const API_KEY_URL = "/auth/create-api-key";
+
+
+const welcomeHeader = document.getElementById("welcome_header");
+const loginContainer = document.getElementById("login_container");
+const registerContainer = document.getElementById("register_container");
+const createNewText = document.getElementById("create-acc");
+
+function toggleCreateAccount(){
+  createNewText.addEventListener("click", ()=>{
+    loginContainer.classList.toggle("hidden");
+    
+    if(loginContainer.classList.contains("hidden")){
+        registerContainer.classList.toggle("hidden");
+        welcomeHeader.innerText = "Create Account";
+        createNewText.innerText = "Sign in instead"
+    }else{
+        registerContainer.classList.toggle("hidden");
+        welcomeHeader.innerText = "Welcome";
+        createNewText.innerText = "Create new account"
+    }
+  })
+}
+toggleCreateAccount()
+
+
+
+
 
 // async function getToken(url){
 //   try{
@@ -30,17 +60,23 @@ const API_KEY_URL = "/auth/create-api-key";
 
 
 
-// export async function registerUser(url, {name, email, password}){
+
+
+
+// export async function registerUser(url){
 //   try{
+//     const registerForm = document.getElementById("register_form");
+//     const formObject = getValuesFromForm(registerForm);
+
 //     const postData ={
 //       method : `POST`,
 //       headers: {
 
 //       },
 //       body: JSON.stringify({
-//         "name": name,
-//         "email": email,
-//         "password": password,
+//         "name": formObject.name,
+//         "email": formObject.email,
+//         "password": formObject.password,
 //       })
 //     }
 //   const response = await fetch(url, postData);
@@ -51,9 +87,9 @@ const API_KEY_URL = "/auth/create-api-key";
 //     console.log("Error in registering user")
 //   }
 // }
-// registerUser(`${API_BASE}${API_REGISTER}`, data);
+// registerUser(`${API_BASE}${API_REGISTER}`);
 
-//Must save name, email, password in OBject of data
+// Must save name, email, password in OBject of data
 
 
 
@@ -67,6 +103,11 @@ const API_KEY_URL = "/auth/create-api-key";
 
 
 // export function loginUser(email, password){
+
+//   const loginForm = document.getElementById("login_form");
+//   getValuesFromForm(loginForm);
+
+
 //   method : `POST`,
 //   header: "",
 //   body: JSON.stringify({
@@ -121,27 +162,7 @@ const API_KEY_URL = "/auth/create-api-key";
 
 // }
 
-const welcomeHeader = document.getElementById("welcome_header");
-const loginContainer = document.getElementById("login_container");
-const registerContainer = document.getElementById("register_container");
-const createNewText = document.getElementById("create-acc");
 
-function toggleCreateAccount(){
-  createNewText.addEventListener("click", ()=>{
-    loginContainer.classList.toggle("hidden");
-    
-    if(loginContainer.classList.contains("hidden")){
-        registerContainer.classList.toggle("hidden");
-        welcomeHeader.innerText = "Create Account";
-        createNewText.innerText = "Sign in instead"
-    }else{
-        registerContainer.classList.toggle("hidden");
-        welcomeHeader.innerText = "Welcome";
-        createNewText.innerText = "Create new account"
-    }
-  })
-}
-toggleCreateAccount()
 
 
 
