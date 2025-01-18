@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="js/index.js"></script>
 </head>
 <body class="min-h-screen grid grid-rows-[auto_1fr_auto] w-full h-full bg-no-repeat bg-cover" style="background-image: url('/images/aut-big.jpg');">
 
@@ -19,9 +20,9 @@
   <main class="grid place-items-center">
     <section class="">
       <div class="w-full">
-        <h1 class="text-3xl font-sans flex justify-center pb-6">Welcome</h1>
+        <h1 class="text-3xl font-sans flex justify-center pb-6" id="welcome_header">Welcome</h1>
   
-        <div class="">
+        <div class="" id="login_container">
           <form action="/feed/index.html" class="flex flex-col" >
             <div class="flex flex-col">
               <label for="email" class=""></label>
@@ -36,8 +37,10 @@
             </div>
           </form>
         </div>
+        
+
           <a href="#" class="flex justify-end">
-            <p class="underline text-xs text-blue pt-4 pr-4">Create new account</p>
+            <p class="underline text-xs text-blue pt-4 pr-4" id="create-acc">Create new account</p>
           </a>
       </div>
     </section>
