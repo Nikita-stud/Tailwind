@@ -1,6 +1,7 @@
 import { getValuesFromForm } from "./helper/events/getValuesFromForm.js";
 
-
+const API_KEY = "30bec31f-a369-4a88-bc15-fcfdec592f3d";
+const ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTmlraXRhX0ZlZG9yb3YiLCJlbWFpbCI6Im5pa2ZlZDUwODI3QHN0dWQubm9yb2ZmLm5vIiwiaWF0IjoxNzM3Mjc4Njg4fQ.nbtZW66ViYfj2Qnzxcg_ZCsD--PYcBRjYHqD4BQS964"
 const API_BASE = "https://v2.api.noroff.dev";
 const API_REGISTER = "/auth/register";
 const API_LOGIN = "/auth/login";
@@ -33,6 +34,32 @@ toggleCreateAccount()
 
 
 
+
+async function getPosts(accessToken, apiKey) {
+  const response = await fetch("https://v2.api.noroff.dev/social/posts", {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      "X-Noroff-API-Key": apiKey,
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    // Possibly check for errors
+    const errorData = await response.json();
+    console.error("Error fetching posts:", errorData);
+    return;
+  }
+
+  const data = await response.json();
+  console.log(data);
+  return data;
+}
+getPosts(`${ACCESS_TOKEN}`, `${API_KEY}` )
+
+
+
 // async function getToken(url){
 //   try{
 //     const postData ={
@@ -57,8 +84,9 @@ toggleCreateAccount()
 
 
 
-
-
+for(element of element){
+  .then()
+}
 
 
 
