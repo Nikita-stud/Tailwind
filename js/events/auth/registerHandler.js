@@ -1,30 +1,30 @@
-import { API_BASE } from "../../constants/constants.js";
-import { API_REGISTER } from "../../constants/constants.js";
-import { getValuesFromForm } from "../../helper/events/getValuesFromForm.js";
+import { registerUser } from "../../api/auth/registerUser.js";
 
-// const registerForm = document.getElementById("registerForm");
-
-export async function registerHandler(url){
-  try{
-    const formObject =  getValuesFromForm("#registerForm");
-
-    const postData ={
-      method : `POST`,
-      headers: {
-
-      },
-      body: JSON.stringify({
-        "name": formObject.name,
-        "email": formObject.email,
-        "password": formObject.password,
-      })
-    }
-  const response = await fetch(url, postData);
-  const json = await response.json();
-  return json; 
-
-  }catch(error){
-    console.log("Error in registering user")
+export function registerHandler(){
+  const registerForm = document.getElementById("registerForm");
+  if(registerForm){
+    registerForm.addEventListener("submit", submitForm);
   }
 }
-registerHandler(`${API_BASE}${API_REGISTER}`);
+
+function submitForm(e){
+  e.preventDefault();
+  const form = new FormData(e.target);
+  const data = Object.fromEntries(form.entries());
+
+  console.log(data);
+  registerUser(data);
+}
+
+// export function getValuesFromForm(formQuery){
+//   const formID = document.querySelector(`${formQuery}`);
+  
+//   formID.addEventListener("submit", (e)=>{
+//     e.preventDefault();
+  
+//     const data = new FormData(e.target);
+//     const entries = Object.fromEntries(data.entries());
+//     console.log(entries)
+//     return entries;
+//   })
+// }

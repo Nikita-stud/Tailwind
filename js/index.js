@@ -9,7 +9,7 @@ function pathEvents(){
     case "/index.html":
     case "/":
       break;
-    case "/register/":
+    case "/register.html":
       registerHandler();
       break;
   }
@@ -31,36 +31,36 @@ pathEvents()
 
 
 
-import { getValuesFromForm } from "./helper/events/getValuesFromForm.js";
+// import { getValuesFromForm } from "./helper/events/getValuesFromForm.js";
 
 
-const loginContainer = document.getElementById("login_container");
-const registerContainer = document.getElementById("register_container");
+// const loginContainer = document.getElementById("login_container");
+// const registerContainer = document.getElementById("register_container");
 
 
 
-async function getPosts(accessToken, apiKey) {
-  const response = await fetch("https://v2.api.noroff.dev/social/posts", {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-      "X-Noroff-API-Key": apiKey,
-      "Content-Type": "application/json",
-    },
-  });
+// async function getPosts(accessToken, apiKey) {
+//   const response = await fetch("https://v2.api.noroff.dev/social/posts", {
+//     method: "GET",
+//     headers: {
+//       Authorization: `Bearer ${accessToken}`,
+//       "X-Noroff-API-Key": apiKey,
+//       "Content-Type": "application/json",
+//     },
+//   });
 
-  if (!response.ok) {
-    // Possibly check for errors
-    const errorData = await response.json();
-    console.error("Error fetching posts:", errorData);
-    return;
-  }
+//   if (!response.ok) {
+//     // Possibly check for errors
+//     const errorData = await response.json();
+//     console.error("Error fetching posts:", errorData);
+//     return;
+//   }
 
-  const data = await response.json();
-  console.log(data);
-  return data;
-}
-getPosts(`${ACCESS_TOKEN}`, `${API_KEY}` )
+//   const data = await response.json();
+//   console.log(data);
+//   return data;
+// }
+// getPosts(`${ACCESS_TOKEN}`, `${API_KEY}` )
 
 
 
