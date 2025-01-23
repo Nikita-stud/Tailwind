@@ -1,4 +1,4 @@
-import { registerHandler } from "./events/auth/registerHandler.js";
+import { formHandler } from "./events/auth/formHandler.js";
 
 function pathEvents(){
 
@@ -8,9 +8,10 @@ function pathEvents(){
   switch(pathName){
     case "/index.html":
     case "/":
+      formHandler(`#loginForm`, pathName);
       break;
     case "/register.html":
-      registerHandler();
+      formHandler(`#registerForm`, pathName);
       break;
   }
 }
@@ -98,19 +99,7 @@ pathEvents()
 
 
 
-// export function loginUser(email, password){
 
-//   const loginForm = document.getElementById("login_form");
-//   getValuesFromForm(loginForm);
-
-
-//   method : `POST`,
-//   header: "",
-//   body: JSON.stringify({
-//     "email": email,
-//     "password": password,
-//   })
-// }
 
 // export function viewPosts(){
 

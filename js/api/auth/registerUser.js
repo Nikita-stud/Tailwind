@@ -11,6 +11,7 @@ export async function registerUser(user){
   const response = await fetch(API_REGISTER, postData);
   const json = await response.json();
 
+  //This line throws Error of Network-Register.errors (if exists) first value (if exists ) and access message
   if(!json.ok){
     throw new Error(json.errors?.[0]?.message || "Registration failed");
   }
