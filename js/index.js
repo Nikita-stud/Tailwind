@@ -1,37 +1,41 @@
+import { registerHandler } from "./events/auth/registerHandler.js";
+
+function pathEvents(){
+
+  const pathName = window.location.pathname;
+
+  console.log(pathName);
+  switch(pathName){
+    case "/index.html":
+    case "/":
+      break;
+    case "/register/":
+      registerHandler();
+      break;
+  }
+}
+pathEvents()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { getValuesFromForm } from "./helper/events/getValuesFromForm.js";
 
-const API_KEY = "30bec31f-a369-4a88-bc15-fcfdec592f3d";
-const ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTmlraXRhX0ZlZG9yb3YiLCJlbWFpbCI6Im5pa2ZlZDUwODI3QHN0dWQubm9yb2ZmLm5vIiwiaWF0IjoxNzM3Mjc4Njg4fQ.nbtZW66ViYfj2Qnzxcg_ZCsD--PYcBRjYHqD4BQS964"
-const API_BASE = "https://v2.api.noroff.dev";
-const API_REGISTER = "/auth/register";
-const API_LOGIN = "/auth/login";
-const API_KEY_URL = "/auth/create-api-key";
 
-
-const welcomeHeader = document.getElementById("welcome_header");
 const loginContainer = document.getElementById("login_container");
 const registerContainer = document.getElementById("register_container");
-const createNewText = document.getElementById("create-acc");
-
-function toggleCreateAccount(){
-  createNewText.addEventListener("click", ()=>{
-    loginContainer.classList.toggle("hidden");
-    
-    if(loginContainer.classList.contains("hidden")){
-        registerContainer.classList.toggle("hidden");
-        welcomeHeader.innerText = "Create Account";
-        createNewText.innerText = "Sign in instead"
-    }else{
-        registerContainer.classList.toggle("hidden");
-        welcomeHeader.innerText = "Welcome";
-        createNewText.innerText = "Create new account"
-    }
-  })
-}
-toggleCreateAccount()
-
-
-
 
 
 
@@ -82,42 +86,6 @@ getPosts(`${ACCESS_TOKEN}`, `${API_KEY}` )
 // }
 // getToken(`${API_BASE}${API_KEY_URL}`);
 
-
-
-for(element of element){
-  .then()
-}
-
-
-
-
-// export async function registerUser(url){
-//   try{
-//     const registerForm = document.getElementById("register_form");
-//     const formObject = getValuesFromForm(registerForm);
-
-//     const postData ={
-//       method : `POST`,
-//       headers: {
-
-//       },
-//       body: JSON.stringify({
-//         "name": formObject.name,
-//         "email": formObject.email,
-//         "password": formObject.password,
-//       })
-//     }
-//   const response = await fetch(url, postData);
-//   const json = await response.json();
-//   return json; 
-
-//   }catch(error){
-//     console.log("Error in registering user")
-//   }
-// }
-// registerUser(`${API_BASE}${API_REGISTER}`);
-
-// Must save name, email, password in OBject of data
 
 
 

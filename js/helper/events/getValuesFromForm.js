@@ -1,4 +1,6 @@
-export function getValuesFromForm(formID){
+export function getValuesFromForm(formQuery){
+  const formID = document.querySelector(`${formQuery}`);
+  
   formID.addEventListener("submit", (e)=>{
     e.preventDefault();
   
