@@ -1,17 +1,16 @@
 import { formHandler } from "./events/auth/formHandler.js";
 
 function pathEvents(){
-
   const pathName = window.location.pathname;
 
   console.log(pathName);
   switch(pathName){
     case "/index.html":
     case "/":
-      formHandler(`#loginForm`, pathName);
+      formHandler('#loginForm', pathName);
       break;
     case "/register.html":
-      formHandler(`#registerForm`, pathName);
+      formHandler('#registerForm', pathName);
       break;
   }
 }

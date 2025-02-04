@@ -1,3 +1,4 @@
+import { loginUser } from "../../api/auth/loginUser.js";
 import { registerUser } from "../../api/auth/registerUser.js";
 
 export function formHandler(formID, pathName){
@@ -15,9 +16,11 @@ export function formHandler(formID, pathName){
 
     //Depending on the pathName/endpoint the form values will be send to different forms
     if(pathName === "/register.html"){
+      console.log("registerUser is being activated in formHandler")
       registerUser(entries);
     }
-    else if(pathName === "/index.html"){
+    if(pathName === "/" || pathName === "/index.html"){
+      console.log("loginUser is being activated in formHandler")
       loginUser(entries);
     }
   })
