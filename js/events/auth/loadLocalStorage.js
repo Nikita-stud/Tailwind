@@ -1,3 +1,3 @@
 export function loadLocalStorage(key){
-  localStorage.getItem(key);
+  return localStorage.getItem(key);
 }

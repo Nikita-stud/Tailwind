@@ -1,6 +1,6 @@
 import { API_KEY } from "../../constants/tokens.js"
 import { API_POSTS } from "../../constants/constants.js";
-import { loadLocalStorage } from "../../events/auth/loadLoacalStorage.js";
+import { loadLocalStorage } from "../../events/auth/loadLocalStorage.js";
 
 export async function getPosts(){
   try{
@@ -15,9 +15,7 @@ export async function getPosts(){
       const response = await fetch(API_POSTS, fetchPosts);
       const json = await response.json();
       console.log(json);
-
-
-
+      
   }catch(error){
       console.log(error)
     }
