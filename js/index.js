@@ -1,4 +1,6 @@
+// import { getPosts } from "./api/posts/getPosts.js";
 import { formHandler } from "./events/auth/formHandler.js";
+
 
 function pathEvents(){
   const pathName = window.location.pathname;
@@ -12,11 +14,32 @@ function pathEvents(){
     case "/register.html":
       formHandler('#registerForm', pathName);
       break;
+    // case "/feed":
+    //   getPosts()
+    //   break;
   }
 }
 pathEvents()
 
 
+// import { JWT_TOKEN } from "../../constants/tokens,js"
+// import { API_KEY } from "../../constants/tokens.js"
+// import { API_POSTS } from "../../constants/constants.js";
+
+// export async function getPosts(){
+//   const fetchPosts = {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `Bearer ${JWT_TOKEN}`,
+//       "X-Noroff-API-Key": API_KEY,
+//     },
+//   }
+//     const response = await fetch(API_POSTS, fetchPosts);
+//     const json = await response.json();
+//     console.log(json);
+//     return json;
+// }
 
 
 
