@@ -14,8 +14,8 @@ export async function getPosts(){
     }
       const response = await fetch(API_POSTS, fetchPosts);
       const json = await response.json();
-      console.log(json);
-      
+      return json;
+
   }catch(error){
       console.log(error)
     }

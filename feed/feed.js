@@ -1,3 +1,4 @@
+import { createPosts } from "../js/api/posts/createPosts.js";
 import { getPosts } from "../js/api/posts/getPosts.js";
 
 function pathEvents(){
@@ -6,7 +7,15 @@ function pathEvents(){
 
   switch(pathName){
     case "/feed/":
-      getPosts()
+      const fetchPosts = async () =>{
+        try{
+          const postsObjects = await getPosts()
+          createPosts(postsObjects)
+        }catch(error){
+          console.log(error)
+        }
+      }
+      fetchPosts();
       break;
   }
 }
