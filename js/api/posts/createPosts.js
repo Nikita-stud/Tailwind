@@ -4,9 +4,9 @@ export function createPosts(posts){
   const newArray = posts.data.filter((post)=>{
     return post.body && post.title.trim().length >= 4;
   });
+  console.log(newArray)
 
   for(let i=0; i < newArray.length; i++ ){
-    console.log(newArray)
 
     const article = document.createElement("article");
     article.classList.add("p-10", "w-100", "bg-slate-50", "shadow-md", "rounded-xl");
@@ -17,11 +17,12 @@ export function createPosts(posts){
     const capitalTitle = newArray[i].title.toUpperCase();
     title.innerText = capitalTitle;
 
-
     const img = document.createElement("img");
-    article.classList.add("w-100", "h-100", "pb-5", "m-auto", "object-cover", "bg-no-repeat");
-    img.src = newArray[i].media.url
-    img.alt = newArray[i].media.alt
+    if(newArray[i].media && newArray[i].media.url){
+      article.classList.add("w-100", "h-100", "pb-5", "m-auto", "object-cover", "bg-no-repeat");
+      img.src = newArray[i].media.url;
+      img.alt = newArray[i].media.alt || "Post image which is not described"
+    }
 
     const text = document.createElement("p");
     text.innerText = newArray[i].body;
@@ -31,6 +32,4 @@ export function createPosts(posts){
     article.append(img);
     article.append(text);
   }
-
-
 }
