@@ -1,5 +1,6 @@
 // import { getPosts } from "./api/posts/getPosts.js";
 import { formHandler } from "./events/auth/formHandler.js";
+import { userFormValidation } from "./ui/userFormValidation.js";
 
 
 function pathEvents(){
@@ -13,6 +14,7 @@ function pathEvents(){
       break;
     case "/register.html":
       formHandler('#registerForm', pathName);
+      userFormValidation('#registerForm', '#submitRegister');
       break;
     // case "/feed":
     //   getPosts()

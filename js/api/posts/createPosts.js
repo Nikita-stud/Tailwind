@@ -4,9 +4,9 @@ export function createPosts(posts){
   const newArray = posts.data.filter((post)=>{
     return post.body && post.title.trim().length >= 4;
   });
-  console.log(newArray.length)
 
   for(let i=0; i < newArray.length; i++ ){
+    console.log(newArray)
 
     const article = document.createElement("article");
     article.classList.add("p-10", "w-100", "bg-slate-50", "shadow-md", "rounded-xl");
