@@ -13,18 +13,19 @@ export function createPosts(posts){
     article.setAttribute("id", newArray[i].id);
 
     const title = document.createElement("h3");
-    article.classList.add("text-2xl", "font-serif", "pb-5");
+    title.classList.add("text-2xl","mb-4", "font-serif", "font-medium", "underline", "underline-offset-4");
     const capitalTitle = newArray[i].title.toUpperCase();
     title.innerText = capitalTitle;
 
     const img = document.createElement("img");
     if(newArray[i].media && newArray[i].media.url){
-      article.classList.add("w-100", "h-100", "pb-5", "m-auto", "object-cover", "bg-no-repeat");
+      img.classList.add("w-100", "mb-4", "h-100", "m-auto", "object-cover", "bg-no-repeat");
       img.src = newArray[i].media.url;
       img.alt = newArray[i].media.alt || "Post image which is not described"
     }
 
     const text = document.createElement("p");
+    text.classList.add("text-lg", "font-medium", "font-sans")
     text.innerText = newArray[i].body;
 
     postsContainer.append(article);
