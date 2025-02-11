@@ -78,10 +78,20 @@
 
       <div>
         <div>
-          <form action="" method="POST" class="grid md:flex gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
-            <img src="../images/profile.jpg" alt="profile image of the user" class="hidden md:block w-14 h-14 rounded-full">
-            <textarea name="post" id="post" rows="1" cols="10" class="pb-10 md:pb-0 w-full pl-2 pt-3 rounded-xl bg-slate-50 border border-black" placeholder="What is on your mind George?"></textarea>
-            <button class="bg-black text-white rounded-full md:mt-20 px-10 py-2 text-xl hover:bg-slate-800">Post</button>
+          <form action="#" id="yourPostForm" method="POST" class="grid md:flex md:flex-col gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
+            <div class="flex flex-col -mt-2">
+              <label for="title" class="pb-1 text-xl md:text-2xl">Add relevant title</label>
+              <input type="text" id="title" name="title" placeholder="Your title" class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl md:max-w-60">
+            </div>
+            <div class="flex flex-col -mt-2">
+              <label for="image" class="pb-1 text-xl md:text-2xl">Share your image</label>
+              <input type="text" id="image" placeholder="Add image URL here" class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl md:max-w-80">
+            </div>
+            <div class="flex flex-col -mt-2">
+              <label for="post" class="pb-1 text-xl md:text-2xl">What is on your mind?</label>
+              <textarea name="post" id="post" rows="1" placeholder="What is on your mind?" class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl h-20"></textarea>
+            </div>
+            <button class="bg-black text-white rounded-full px-10 py-2 text-xl hover:bg-slate-800">Post</button>
           </form>
         </div>
         <section id="posts_container" class="flex flex-col gap-5">
