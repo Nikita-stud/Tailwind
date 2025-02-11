@@ -23,6 +23,7 @@ export function formHandler(formID, pathName){
       console.log("loginUser is being activated in formHandler")
       loginUser(entries);
     }
+    return entries;
   })
 }
 
