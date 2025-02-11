@@ -1197,6 +1197,10 @@ video {
     padding-top: 2.5rem;
   }
 
+  .md\:pr-20 {
+    padding-right: 5rem;
+  }
+
   .md\:align-top {
     vertical-align: top;
   }
@@ -1217,6 +1221,10 @@ video {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
+
+  .lg\:pr-20 {
+    padding-right: 5rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1233,6 +1241,10 @@ video {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+
+  .xl\:pr-20 {
+    padding-right: 5rem;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -1244,5 +1256,29 @@ video {
   .\32xl\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .\32xl\:pr-20 {
+    padding-right: 5rem;
+  }
+
+  .\32xl\:pr-40 {
+    padding-right: 10rem;
+  }
+
+  .\32xl\:pr-60 {
+    padding-right: 15rem;
+  }
+
+  .\32xl\:pl-20 {
+    padding-left: 5rem;
+  }
+
+  .\32xl\:pl-1 {
+    padding-left: 0.25rem;
+  }
+
+  .\32xl\:pl-0 {
+    padding-left: 0px;
   }
 }

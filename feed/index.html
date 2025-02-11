@@ -34,7 +34,7 @@
   </header>
 
   <main>
-    <section class="px-10 md:flex md:gap-5 md:p lg:px-10 xl:px-40 xl:py-10 2xl:py-20 2xl:px-80">
+    <section class="px-10 md:flex md:gap-5 md:p md:pr-20 lg:px-10 lg:pr-20 xl:px-40 xl:py-10 2xl:py-20 2xl:px-80">
       <form action="" method="POST" class="flex">
         <label for=""></label>
         <input type="search" class="md:hidden pl-5 h-10 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-xl" placeholder="Search">
@@ -61,15 +61,30 @@
         <div class="grid place-content-center mb-5 md:mb-0 text-xl mt-5 p-2 shadow-md rounded-xl bg-slate-50">
           <form action="" method="POST" class="flex justify-between flex-col">
             <div>
-              <input type="radio" id="global" name="radio" class="w-4 h-4 border-black">
+              <input 
+                type="radio" 
+                id="global" 
+                name="global"
+                 class="w-4 h-4 border-black"
+              />
               <label for="global" class="cursor-pointer">Global Posts</label>
             </div>
             <div>
-              <input type="radio" id="friends" name="radio" class="w-4 h-4 border-black">
+              <input 
+                type="radio" 
+                id="friends" 
+                name="friends"
+                 class="w-4 h-4 border-black"
+              />
               <label for="friends" class="cursor-pointer">Friends Posts</label>
             </div>
             <div>
-              <input type="radio" id="todays" name="radio" class="w-4 h-4 border-black">
+              <input 
+                type="radio" 
+                id="todays" 
+                name="todays" 
+                class="w-4 h-4 border-black"
+              />
               <label for="todays" class="cursor-pointer">Todays Posts</label>
             </div>
           </form>
@@ -81,15 +96,33 @@
           <form action="#" id="yourPostForm" method="POST" class="grid md:flex md:flex-col gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
             <div class="flex flex-col -mt-2">
               <label for="title" class="pb-1 text-xl md:text-2xl">Add relevant title</label>
-              <input type="text" id="title" name="title" placeholder="Your title" class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl md:max-w-60">
+              <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                placeholder="Your title"
+                class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl md:max-w-60"
+              />
             </div>
             <div class="flex flex-col -mt-2">
               <label for="image" class="pb-1 text-xl md:text-2xl">Share your image</label>
-              <input type="text" id="image" placeholder="Add image URL here" class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl md:max-w-80">
+              <input 
+                type="text" 
+                id="image"
+                name="image"
+                placeholder="Add image URL here" 
+                class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl md:max-w-80"
+              />
             </div>
             <div class="flex flex-col -mt-2">
-              <label for="post" class="pb-1 text-xl md:text-2xl">What is on your mind?</label>
-              <textarea name="post" id="post" rows="1" placeholder="What is on your mind?" class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl h-20"></textarea>
+              <label for="text" class="pb-1 text-xl md:text-2xl">What is on your mind?</label>
+              <textarea 
+                id="text"
+                name="text"  
+                rows="1" 
+                placeholder="What is on your mind?" 
+                class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl h-20">
+              </textarea>
             </div>
             <button class="bg-black text-white rounded-full px-10 py-2 text-xl hover:bg-slate-800">Post</button>
           </form>
