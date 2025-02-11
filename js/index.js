@@ -1,6 +1,7 @@
-// import { getPosts } from "./api/posts/getPosts.js";
 import { formHandler } from "./events/auth/formHandler.js";
 import { userFormValidation } from "./ui/userFormValidation.js";
+import { createPosts } from "./api/posts/createPosts.js";
+import { getPosts } from "./api/posts/getPosts.js";
 
 
 function pathEvents(){
@@ -16,9 +17,17 @@ function pathEvents(){
       formHandler('#registerForm', pathName);
       userFormValidation('#registerForm', '#submitRegister');
       break;
-    // case "/feed":
-    //   getPosts()
-    //   break;
+    case "/feed/":
+      const fetchPosts = async () =>{
+        try{
+          const postsObjects = await getPosts()
+            createPosts(postsObjects)
+          }catch(error){
+            console.log(error)
+          }
+        }
+      fetchPosts();
+       break;
   }
 }
 pathEvents()
