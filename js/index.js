@@ -19,8 +19,10 @@ function pathEvents(){
       userFormValidation('#registerForm', '#submitRegister');
       break;
     case "/feed/":
-      const postedData = formHandler('#yourPostForm', pathName);
-      sendPostToApi(postedData);
+      formHandler('#yourPostForm', pathName);
+      // console.log("ENTIRESSS", postedData)
+
+      // sendPostToApi(postedData);
       const fetchPosts = async () =>{
         try{
           const postsObjects = await getPosts()

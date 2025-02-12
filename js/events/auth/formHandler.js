@@ -1,5 +1,6 @@
 import { loginUser } from "../../api/auth/loginUser.js";
 import { registerUser } from "../../api/auth/registerUser.js";
+import { sendPostToApi } from "../../ui/auth/sendPostToApi.js";
 
 export function formHandler(formID, pathName){
   //This line gets the ID of the Form
@@ -23,7 +24,10 @@ export function formHandler(formID, pathName){
       console.log("loginUser is being activated in formHandler")
       loginUser(entries);
     }
-    return entries;
+    if(pathName ==="/feed/"){
+      sendPostToApi(entries);
+    }
+    // return entries;
   })
 }
 
