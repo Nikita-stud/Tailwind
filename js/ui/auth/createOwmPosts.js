@@ -3,9 +3,14 @@ import { API_KEY } from "../../constants/tokens.js";
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.js";
 
 export async function createOwnPost(postData){
-
-  console.log(API_KEY)
-  console.log(loadLocalStorage('token'))
+  if(postData.image.trim() ===""){
+    delete postData.image;
+    delete postData.media;
+  }else{
+    postData.media ={
+      url: postData.image,
+    }
+  }
 
   const post = {
     method: "POST",
@@ -18,12 +23,15 @@ export async function createOwnPost(postData){
       title: postData.title,
       body: postData.text,
       media: {
-        url: postData.image,
+        
       }
     }),
   }
 
   const fetched = await fetch(API_POSTS, post);
   const json = await fetched.json();
-  return json;
+
+  if(!json.ok){
+    throw new Error(json.errors?.[0]?.message || "Registration failed");
+  }
 }
