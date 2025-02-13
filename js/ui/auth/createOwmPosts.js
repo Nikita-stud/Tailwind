@@ -3,14 +3,13 @@ import { API_KEY } from "../../constants/tokens.js";
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.js";
 
 export async function createOwnPost(postData){
-  if(postData.image.trim() ===""){
-    delete postData.image;
-    delete postData.media;
-  }else{
-    postData.media ={
-      url: postData.image,
-    }
-  }
+  // if(postData.image.trim() ===""){
+  //   delete postData.image;
+  // }else{
+  //   postData.media ={
+  //     url: postData.image,
+  //   }
+  // }
 
   const post = {
     method: "POST",
@@ -23,7 +22,7 @@ export async function createOwnPost(postData){
       title: postData.title,
       body: postData.text,
       media: {
-        
+        url: postData.image,
       }
     }),
   }
