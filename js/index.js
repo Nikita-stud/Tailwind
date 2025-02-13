@@ -2,8 +2,6 @@ import { formHandler } from "./events/auth/formHandler.js";
 import { userFormValidation } from "./ui/userFormValidation.js";
 import { createPosts } from "./api/posts/createPosts.js";
 import { getPosts } from "./api/posts/getPosts.js";
-import { sendPostToApi } from "./ui/auth/sendPostToApi.js";
-
 
 function pathEvents(){
   const pathName = window.location.pathname;

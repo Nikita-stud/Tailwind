@@ -1,6 +1,6 @@
 import { loginUser } from "../../api/auth/loginUser.js";
 import { registerUser } from "../../api/auth/registerUser.js";
-import { sendPostToApi } from "../../ui/auth/sendPostToApi.js";
+import { createOwnPost } from "../../ui/auth/createOwmPosts.js";
 
 export function formHandler(formID, pathName){
   //This line gets the ID of the Form
@@ -25,7 +25,7 @@ export function formHandler(formID, pathName){
       loginUser(entries);
     }
     if(pathName ==="/feed/"){
-      sendPostToApi(entries);
+      createOwnPost(entries);
     }
     // return entries;
   })
