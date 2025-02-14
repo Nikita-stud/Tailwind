@@ -12,7 +12,15 @@ export function searchPosts(posts){
     });
     const postsContainer = document.getElementById('posts_container')
     postsContainer.innerHTML = "";
-    console.log("Filtered Posts",filteredPosts)
+
+    if(filteredPosts.length === 0){
+      const article = document.createElement("article");
+      article.classList.add("p-10", "w-100", "bg-slate-50", "shadow-md", "rounded-xl");
+      article.innerHTML = `<div class="text-3xl font-sans">
+                              <p class"text-red-500">! There are no Posts starting with the search letters, try other combinations !</p>
+                           </div>`;
+      postsContainer.append(article);
+    }
     createPosts(filteredPosts);
   });
 }
