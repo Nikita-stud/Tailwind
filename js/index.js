@@ -2,6 +2,7 @@ import { formHandler } from "./events/auth/formHandler.js";
 import { userFormValidation } from "./ui/userFormValidation.js";
 import { createPosts } from "./api/posts/createPosts.js";
 import { getPosts } from "./api/posts/getPosts.js";
+import { searchPosts } from "./events/posts/searchPosts.mjs";
 
 function pathEvents(){
   const pathName = window.location.pathname;
@@ -18,18 +19,17 @@ function pathEvents(){
       break;
     case "/feed/":
       formHandler('#yourPostForm', pathName);
-      // console.log("ENTIRESSS", postedData)
 
-      // sendPostToApi(postedData);
       const fetchPosts = async () =>{
         try{
-          const postsObjects = await getPosts()
-            createPosts(postsObjects)
+          const postsObjects = await getPosts();
+            createPosts(postsObjects.data);
+            searchPosts(postsObjects);
           }catch(error){
             console.log(error)
           }
         }
-      fetchPosts();
+        fetchPosts()
        break;
   }
 }

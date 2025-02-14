@@ -1,7 +1,7 @@
 export function createPosts(posts){
   const postsContainer = document.getElementById('posts_container')
 
-  const newArray = posts.data.filter((post)=>{
+  const newArray = posts.filter((post)=>{
     return post.body && post.title.trim().length >= 4;
   });
   console.log(newArray)

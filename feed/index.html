@@ -16,10 +16,19 @@
         <img src="../images/logo.png" alt="The logo of the page NOWOW">
       </a>
     </div>
-    <div class="w-100 p-5">
-      <form action="" method="POST">
-        <label for=""></label>
-        <input type="search" class="hidden md:block pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
+    <div class="p-5">
+      <form id="searchForm" method="POST">
+        <fieldset  class="flex">
+          <label for="search"><p class="hidden">Deleted</p></label>
+          <input 
+            type="search"
+            name="search"
+            id="search"
+            placeholder="What to find?"
+            class="hidden md:block pl-5 lg:pr-20 2xl:pr-40 h-10 2xl:h-12 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" 
+          />
+          <button type="submit" class="hidden md:block -ml-10 text-lg px-10 2xl:-ml-20 bg-black text-slate-100 hover:cursor-pointer hover:bg-slate-700 rounded-full">Search</button>
+        </fieldset>
       </form> 
     </div>
     <div class="text-xl py-6 px-10 flex flex-row justify-end">
