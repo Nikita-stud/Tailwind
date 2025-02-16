@@ -29,5 +29,24 @@ export function createPosts(posts){
     article.append(title);
     article.append(img);
     article.append(text);
+
+    const hasTag = posts[i].tags.includes(`${email}`);
+    if(hasTag){
+      const buttonContainer = document.createElement("div");
+      buttonContainer.classList.add("flex", "justify-between");
+
+
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("bg-red-400", "text-white", "rounded-full", "px-8", "md:px-24", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
+      deleteButton.innerText = "Delete";
+
+      const editButton = document.createElement("button");
+      editButton.classList.add("bg-green-400", "text-white", "rounded-full", "px-8", "md:px-24", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
+      editButton.innerText = "Edit Post";
+      
+      article.append(buttonContainer)
+      buttonContainer.append(deleteButton);
+      buttonContainer.append(editButton);
+    }
   }
 }
