@@ -1,15 +1,9 @@
 import { API_POSTS } from "../../constants/constants.js";
 import { API_KEY } from "../../constants/tokens.js";
-import { loadLocalStorage } from "../../events/auth/loadLocalStorage.js";
+import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 
 export async function createOwnPost(postData){
-  // if(postData.image.trim() ===""){
-  //   delete postData.image;
-  // }else{
-  //   postData.media ={
-  //     url: postData.image,
-  //   }
-  // }
+  const email = loadLocalStorage('email');
 
   const post = {
     method: "POST",
@@ -21,6 +15,9 @@ export async function createOwnPost(postData){
     body: JSON.stringify({
       title: postData.title,
       body: postData.text,
+      tags: [
+        email
+      ],
       media: {
         url: postData.image,
       }
