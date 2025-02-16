@@ -3,6 +3,7 @@ import { userFormValidation } from "./ui/userFormValidation.js";
 import { createPosts } from "./api/posts/createPosts.js";
 import { getPosts } from "./api/posts/getPosts.js";
 import { searchPosts } from "./events/posts/searchPosts.mjs";
+import { filterPosts } from "./events/posts/filterPosts.mjs";
 
 function pathEvents(){
   const pathName = window.location.pathname;
@@ -24,6 +25,7 @@ function pathEvents(){
         try{
           const postsObjects = await getPosts();
             createPosts(postsObjects.data);
+            filterPosts(postsObjects)
             searchPosts(postsObjects);
           }catch(error){
             console.log(error)
@@ -43,15 +45,7 @@ pathEvents()
 
 // }
 
-// export function searchPosts(){
-
-// }
-
 // export function filterSinglePost(){
-
-// }
-
-// export function createPost(){
 
 // }
 

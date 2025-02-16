@@ -68,33 +68,33 @@
           </div>
         </div>
         <div class="grid place-content-center mb-5 md:mb-0 text-xl mt-5 p-2 shadow-md rounded-xl bg-slate-50">
-          <form action="" method="POST" class="flex justify-between flex-col">
+          <form action="" id="radioFilter" method="POST" class="flex justify-between flex-col">
             <div>
               <input 
-                type="radio" 
-                id="global" 
-                name="global"
-                 class="w-4 h-4 border-black"
-              />
-              <label for="global" class="cursor-pointer">Global Posts</label>
-            </div>
-            <div>
-              <input 
-                type="radio" 
-                id="friends" 
-                name="friends"
-                 class="w-4 h-4 border-black"
-              />
-              <label for="friends" class="cursor-pointer">Friends Posts</label>
-            </div>
-            <div>
-              <input 
-                type="radio" 
-                id="todays" 
-                name="todays" 
-                class="w-4 h-4 border-black"
+              type="radio" 
+              id="todays" 
+              name="radio" 
+              class="w-4 h-4 border-black"
               />
               <label for="todays" class="cursor-pointer">Todays Posts</label>
+            </div>
+            <div>
+              <input 
+                type="radio" 
+                id="weeks" 
+                name="radio"
+                 class="w-4 h-4 border-black"
+              />
+              <label for="friends" class="cursor-pointer">This Weeks Posts</label>
+            </div>
+            <div>
+              <input 
+                type="radio" 
+                id="months" 
+                name="radio"
+                 class="w-4 h-4 border-black"
+              />
+              <label for="global" class="cursor-pointer">This Months Posts</label>
             </div>
           </form>
         </div>
