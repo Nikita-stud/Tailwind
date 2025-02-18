@@ -35,13 +35,14 @@ export function createPosts(posts){
       const buttonContainer = document.createElement("div");
       buttonContainer.classList.add("flex", "justify-between");
 
-
       const deleteButton = document.createElement("button");
-      deleteButton.classList.add("bg-red-400", "text-white", "rounded-full", "px-8", "md:px-24", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
+      deleteButton.setAttribute("id", "deleteButton")
+      deleteButton.classList.add("bg-slate-400", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
       deleteButton.innerText = "Delete";
 
       const editButton = document.createElement("button");
-      editButton.classList.add("bg-green-400", "text-white", "rounded-full", "px-8", "md:px-24", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
+      editButton.setAttribute("id", "editButton")
+      editButton.classList.add("bg-slate-700", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
       editButton.innerText = "Edit Post";
       
       article.append(buttonContainer)
