@@ -36,22 +36,7 @@ function pathEvents(){
        break;
   }
 }
-pathEvents()
-
-
-
-
-// export function filterSinglePost(){
-
-// }
-
-// export function updatePost(){
-
-// }
-
-// export function deletePost(){
-
-// }
+pathEvents();
 
 
 

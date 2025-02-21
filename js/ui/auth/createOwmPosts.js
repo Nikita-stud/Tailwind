@@ -26,7 +26,8 @@ export async function createOwnPost(postData){
 
   const fetched = await fetch(API_POSTS, post);
   const json = await fetched.json();
-
+  location.reload();
+  
   if(!json.ok){
     throw new Error(json.errors?.[0]?.message || "Registration failed");
   }

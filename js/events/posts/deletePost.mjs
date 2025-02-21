@@ -21,6 +21,7 @@ export async function deletePost(buttonID){
     if(!response.ok){
       throw new Error("Did not manage to delete post")
     }
+    location.reload();
   }catch(error){
     console.log("Error deleting the post:", error)
   }
