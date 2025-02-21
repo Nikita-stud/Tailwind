@@ -2,31 +2,26 @@ import { API_POSTS } from "../../constants/constants.js";
 import { API_KEY } from "../../constants/tokens.js";
 import { loadLocalStorage } from "../auth/loadLocalStorage.mjs";
 
-export function deletePost(){
-  const button = document.getElementById("deleteButton");
-  console.log("Delete button :",button)
+export async function deletePost(buttonID){
+  const button = document.getElementById(buttonID);
+  const article = button.closest("article");
+  const id = article.id;
 
-  button.addEventListener("click", async () =>{
-    const article = button.closest("article");
-    const id = article.id;
-    console.log("Delete button id inside:",button.id)
+  const object = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${loadLocalStorage('token')}`,
+      "X-Noroff-API-Key": API_KEY,
+    },
+  }
 
-    const object = {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${loadLocalStorage('token')}`,
-        "X-Noroff-API-Key": API_KEY,
-      },
+  try{
+    const response = await fetch(`${API_POSTS}/${id}`, object);
+    if(!response.ok){
+      throw new Error("Did not manage to delete post")
     }
-
-    try{
-      const response = await fetch(`${API_POSTS}/${id}`, object);
-      if(!response.ok){
-        throw new Error("Did not manage to delete post")
-      }
-    }catch(error){
-      console.log("Error deleting the post:", error)
-    }
-  });
+  }catch(error){
+    console.log("Error deleting the post:", error)
+  }
 }

@@ -4,7 +4,6 @@ import { createPosts } from "./api/posts/createPosts.js";
 import { getPosts } from "./api/posts/getPosts.js";
 import { searchPosts } from "./events/posts/searchPosts.mjs";
 import { filterPosts } from "./events/posts/filterPosts.mjs";
-import { deletePost } from "./events/posts/deletePost.mjs";
 import { editPost } from "./events/posts/editPost.mjs";
 
 function pathEvents(){
@@ -30,7 +29,6 @@ function pathEvents(){
             console.log("This are all the Objects",postsObjects)
             filterPosts(postsObjects)
             searchPosts(postsObjects);
-            deletePost();
             editPost();
           }catch(error){
             console.log(error)

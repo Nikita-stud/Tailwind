@@ -1,5 +1,7 @@
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 import { generateUniqueId } from "../../events/helpers/generateUniqueId.mjs";
+import { deletePost } from "../../events/posts/deletePost.mjs";
+import { editPost } from "../../events/posts/editPost.mjs";
 
 export function createPosts(posts){
   const email = loadLocalStorage('email');
@@ -39,12 +41,14 @@ export function createPosts(posts){
       buttonContainer.classList.add("flex", "justify-between");
 
       const deleteButton = document.createElement("button");
-      deleteButton.setAttribute("id", ctaDeleteId)
+      deleteButton.setAttribute("id", ctaDeleteId);
+      deleteButton.setAttribute("data-action", "delete");
       deleteButton.classList.add("bg-slate-400", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
       deleteButton.innerText = "Delete";
 
       const editButton = document.createElement("button");
       editButton.setAttribute("id", "editButton")
+      editButton.setAttribute("data-action", "edit");
       editButton.classList.add("bg-slate-700", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
       editButton.innerText = "Edit Post";
       
@@ -53,7 +57,15 @@ export function createPosts(posts){
       buttonContainer.append(editButton);
 
       article.addEventListener("click", (e) => {
-        console.log(e.target.id)
+        if(e.target.tagName === "BUTTON"){
+          const buttonID = e.target.id;
+          const action = e.target.dataset.action;
+          if(action === "delete"){
+            deletePost(buttonID);
+          }else if(action === "edit"){
+            // editPost(buttonID)
+          }
+        }
       });
 
       // deleteButton.addEventListener("click", ()=>{
