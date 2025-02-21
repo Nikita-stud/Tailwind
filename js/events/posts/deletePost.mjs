@@ -4,10 +4,12 @@ import { loadLocalStorage } from "../auth/loadLocalStorage.mjs";
 
 export function deletePost(){
   const button = document.getElementById("deleteButton");
+  console.log("Delete button :",button)
 
   button.addEventListener("click", async () =>{
     const article = button.closest("article");
     const id = article.id;
+    console.log("Delete button id inside:",button.id)
 
     const object = {
       method: "DELETE",

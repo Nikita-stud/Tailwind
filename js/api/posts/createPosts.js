@@ -1,4 +1,5 @@
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
+import { generateUniqueId } from "../../events/helpers/generateUniqueId.mjs";
 
 export function createPosts(posts){
   const email = loadLocalStorage('email');
@@ -32,11 +33,13 @@ export function createPosts(posts){
 
     const hasTag = posts[i].tags.includes(`${email}`);
     if(hasTag){
+
+      const ctaDeleteId = generateUniqueId()
       const buttonContainer = document.createElement("div");
       buttonContainer.classList.add("flex", "justify-between");
 
       const deleteButton = document.createElement("button");
-      deleteButton.setAttribute("id", "deleteButton")
+      deleteButton.setAttribute("id", ctaDeleteId)
       deleteButton.classList.add("bg-slate-400", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
       deleteButton.innerText = "Delete";
 
@@ -48,6 +51,14 @@ export function createPosts(posts){
       article.append(buttonContainer)
       buttonContainer.append(deleteButton);
       buttonContainer.append(editButton);
+
+      article.addEventListener("click", (e) => {
+        console.log(e.target.id)
+      });
+
+      // deleteButton.addEventListener("click", ()=>{
+      //   console.log(deleteButton)
+      // })
     }
   }
 }
