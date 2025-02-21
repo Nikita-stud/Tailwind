@@ -36,7 +36,8 @@ export function createPosts(posts){
     const hasTag = posts[i].tags.includes(`${email}`);
     if(hasTag){
 
-      const ctaDeleteId = generateUniqueId()
+      const ctaDeleteId = generateUniqueId();
+      const ctaEditID = generateUniqueId();
       const buttonContainer = document.createElement("div");
       buttonContainer.classList.add("flex", "justify-between");
 
@@ -47,7 +48,7 @@ export function createPosts(posts){
       deleteButton.innerText = "Delete";
 
       const editButton = document.createElement("button");
-      editButton.setAttribute("id", "editButton")
+      editButton.setAttribute("id", ctaEditID);
       editButton.setAttribute("data-action", "edit");
       editButton.classList.add("bg-slate-700", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
       editButton.innerText = "Edit Post";
