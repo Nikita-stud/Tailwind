@@ -4,7 +4,6 @@ import { createPosts } from "./api/posts/createPosts.js";
 import { getPosts } from "./api/posts/getPosts.js";
 import { searchPosts } from "./events/posts/searchPosts.mjs";
 import { filterPosts } from "./events/posts/filterPosts.mjs";
-import { editPost } from "./events/posts/editPost.mjs";
 
 function pathEvents(){
   const pathName = window.location.pathname;
@@ -29,7 +28,6 @@ function pathEvents(){
             console.log("This are all the Objects",postsObjects)
             filterPosts(postsObjects)
             searchPosts(postsObjects);
-            editPost();
           }catch(error){
             console.log(error)
           }

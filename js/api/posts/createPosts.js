@@ -63,14 +63,10 @@ export function createPosts(posts){
           if(action === "delete"){
             deletePost(buttonID);
           }else if(action === "edit"){
-            // editPost(buttonID)
+            editPost(buttonID);
           }
         }
       });
-
-      // deleteButton.addEventListener("click", ()=>{
-      //   console.log(deleteButton)
-      // })
     }
   }
 }
