@@ -11,6 +11,8 @@ export async function editPost(buttonID){
   const image = article.querySelector("img");
   const text = article.querySelector("p");
 
+  const originalHtml = article.innerHTML;
+
   article.innerHTML = `<form action="#" id="editPosts" method="PUT" class="w-100 bg-slate-50 shadow-md rounded-xl">
                           <fieldset class="mb-5 p-5 grid md:flex md:flex-col gap-5 text-2xl">
                             <div class="flex flex-col -mt-2">
@@ -50,6 +52,10 @@ export async function editPost(buttonID){
                           </fieldset>
                         </form>`;
 
+  const cancelButton = document.getElementById("cancelButton");
+  cancelButton.addEventListener("click", ()=>{
+    article.innerHTML = originalHtml;
+  });
                         
   const editedForm = article.querySelector("#editPosts");
   editedForm.addEventListener("submit", async (e)=>{
