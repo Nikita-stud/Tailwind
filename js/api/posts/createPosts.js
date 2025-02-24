@@ -35,7 +35,6 @@ export function createPosts(posts){
 
     const hasTag = posts[i].tags.includes(`${email}`);
     if(hasTag){
-
       const ctaDeleteId = generateUniqueId();
       const ctaEditID = generateUniqueId();
       const buttonContainer = document.createElement("div");
@@ -56,18 +55,24 @@ export function createPosts(posts){
       article.append(buttonContainer)
       buttonContainer.append(deleteButton);
       buttonContainer.append(editButton);
-
-      article.addEventListener("click", (e) => {
-        if(e.target.tagName === "BUTTON"){
-          const buttonID = e.target.id;
-          const action = e.target.dataset.action;
-          if(action === "delete"){
-            deletePost(buttonID);
-          }else if(action === "edit"){
-            editPost(buttonID);
-          }
-        }
-      });
     }
+    article.addEventListener("click", (e) => {
+      const article = e.target.closest("article");
+      const ifButton = e.target.tagName === "BUTTON";
+
+      if(article && !ifButton){
+        console.log("ArticleId:", article.id)
+      }
+
+      if(ifButton){
+        const buttonID = e.target.id;
+        const action = e.target.dataset.action;
+        if(action === "delete"){
+          deletePost(buttonID);
+        }else if(action === "edit"){
+          editPost(buttonID);
+        }
+      }
+    });
   }
 }

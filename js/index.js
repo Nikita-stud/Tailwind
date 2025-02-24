@@ -53,7 +53,7 @@ pathEvents();
 
 // }
 
-// export function handleFriends(){
+// export function follow Unfollow(){
 
 // }
 
