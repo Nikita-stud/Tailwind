@@ -2,6 +2,7 @@ import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 import { generateUniqueId } from "../../events/helpers/generateUniqueId.mjs";
 import { deletePost } from "../../events/posts/deletePost.mjs";
 import { editPost } from "../../events/posts/editPost.mjs";
+import { fetchSinglePost } from "../../ui/auth/fetchSinglePost.mjs";
 
 export function createPosts(posts){
   const email = loadLocalStorage('email');
@@ -61,7 +62,7 @@ export function createPosts(posts){
       const ifButton = e.target.tagName === "BUTTON";
 
       if(article && !ifButton){
-        console.log("ArticleId:", article.id)
+        fetchSinglePost(article.id);
       }
 
       if(ifButton){
