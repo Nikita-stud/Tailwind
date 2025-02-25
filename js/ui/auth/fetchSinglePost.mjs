@@ -1,8 +1,15 @@
+// import { createPosts } from "../../api/posts/createPost.mjs";
 import { API_POSTS } from "../../constants/constants.js";
 import { API_KEY } from "../../constants/tokens.js";
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
+import { getQueryParam } from "../../events/helpers/getQueryParam.mjs";
 
-export async function fetchSinglePost(postID){
+export async function fetchSinglePost(){
+  const postID = getQueryParam("id");
+  if(!postID){
+    window.location.href="/"
+  }
+
   const post = {
     method: "GET",
     headers: {
@@ -14,10 +21,6 @@ export async function fetchSinglePost(postID){
   const fetched = await fetch(`${API_POSTS}/${postID}`, post);
   const json = await fetched.json();
   console.log("This is the single post",json)
-
-  if(json){
-    window.location.href = "/feed/post/";
-  }
   
   // if(!json.ok){
   //   throw new Error(json.errors?.[0]?.message);

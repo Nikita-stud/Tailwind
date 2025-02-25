@@ -62,7 +62,7 @@ export function createPosts(posts){
       const ifButton = e.target.tagName === "BUTTON";
 
       if(article && !ifButton){
-        fetchSinglePost(article.id);
+        window.location.href =`/feed/post/?id=${article.id}`;
       }
 
       if(ifButton){

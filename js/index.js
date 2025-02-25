@@ -4,6 +4,7 @@ import { createPosts } from "./api/posts/createPosts.js";
 import { getPosts } from "./api/posts/getPosts.js";
 import { searchPosts } from "./events/posts/searchPosts.mjs";
 import { filterPosts } from "./events/posts/filterPosts.mjs";
+import { fetchSinglePost } from "./ui/auth/fetchSinglePost.mjs";
 
 function pathEvents(){
   const pathName = window.location.pathname;
@@ -34,6 +35,9 @@ function pathEvents(){
         }
         fetchPosts()
        break;
+    case "/feed/post/":
+      fetchSinglePost()
+      break;
   }
 }
 pathEvents();
@@ -77,3 +81,30 @@ pathEvents();
 //   favoriteList.push(post);
 //   localStorage.setItem("favorites", JSON.stringify(favoriteList));
 // };
+
+
+//helper folder
+// export function getQueryParam(param){
+//   const queryString = document.location.search;
+//   const parameters = new URLSearchParams(queryString);
+//   const parameter = parameters.get(param);
+
+//   return parameter;
+// }
+
+//catch and display ui folder
+// export function catchAndDisplay(container="#jackets__container", message ="There was an unexpected error", messageType ="error"){
+//   const inside = document.querySelector(container);
+//   inside.innerHTML =`<div class="message ${messageType}">${message}</div>`;
+// }
+
+
+
+// const id = getQueryParam("id");
+// const jacketUrl = `${url}/${id}`;
+// if(!id){
+//   window.location.href="/";
+// }
+
+//add this to each article first of all
+/* <a href="details.html?id=${jacket.id}"> */
