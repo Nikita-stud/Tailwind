@@ -17,7 +17,7 @@
       </a>
     </div>
     <div class="p-5">
-      <form id="searchForm" method="POST">
+      <form id="searchForm">
         <fieldset  class="flex">
           <label for="search"><p class="hidden">Deleted</p></label>
           <input 
@@ -25,29 +25,38 @@
             name="search"
             id="search"
             placeholder="What to find?"
-            class="hidden md:block pl-5 lg:pr-20 2xl:pr-40 h-10 2xl:h-12 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" 
+            class=" md:block pl-5 lg:pr-20 2xl:pr-40 h-10 2xl:h-12 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" 
           />
-          <button type="submit" class="hidden md:block -ml-10 text-lg px-10 2xl:-ml-20 bg-black text-slate-100 hover:cursor-pointer hover:bg-slate-700 rounded-full">Search</button>
+          <button type="button" disabled class=" md:block -ml-10 text-lg px-10 2xl:-ml-20 bg-black text-slate-100 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></button>
         </fieldset>
       </form> 
     </div>
     <div class="text-xl py-6 px-10 flex flex-row justify-end">
-      <nav class="">
+      <!-- <nav class="">
         <ul class="flex gap-5 pr-5">
           <li class="hidden md:block"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
           <li class="hidden md:block"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
         </ul>
-      </nav>
+      </nav> -->
       <a href="../profile/index.html">Hi, <span class="underline text-blue">George</span></a>
     </div>
   </header>
 
   <main>
     <section class="px-10 md:flex md:gap-5 md:p md:pr-20 lg:px-10 lg:pr-20 xl:px-40 xl:py-10 2xl:py-20 2xl:px-80">
-      <form action="" method="POST" class="flex">
-        <label for=""></label>
-        <input type="search" class="md:hidden pl-5 h-10 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-xl" placeholder="Search">
-      </form> 
+      <!-- <form id="searchForm" class="flex justify-center">
+        <fieldset  class="flex">
+          <label for="search"><p class="hidden">Deleted</p></label>
+          <input 
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search" 
+           class="md:hidden pl-5 h-10 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" 
+          />
+          <button type="button" disabled class="block md:hidden -ml-10 text-lg px-10 2xl:-ml-20 bg-black text-slate-100 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </fieldset>
+      </form>  -->
       <div>
         <div class="hidden md:block">
           <div class="text-xl flex gap-5 md:text-2xl md:flex-col w-max p-10 shadow-md rounded-xl bg-slate-50">

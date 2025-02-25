@@ -5,6 +5,18 @@ import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 export async function createOwnPost(postData){
   const email = loadLocalStorage('email');
 
+  const bodyData = {
+    title: postData.title,
+      body: postData.text,
+      tags: [email],
+  };
+
+  if(postData.image){
+    bodyData.media = {
+      url: postData.image,
+    };
+  }
+
   const post = {
     method: "POST",
     headers: {
@@ -12,16 +24,7 @@ export async function createOwnPost(postData){
       Authorization: `Bearer ${loadLocalStorage('token')}`,
       "X-Noroff-API-Key": `${API_KEY}`,
     },
-    body: JSON.stringify({
-      title: postData.title,
-      body: postData.text,
-      tags: [
-        email
-      ],
-      media: {
-        url: postData.image,
-      }
-    }),
+    body: JSON.stringify(bodyData),
   }
 
   const fetched = await fetch(API_POSTS, post);
