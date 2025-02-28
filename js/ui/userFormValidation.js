@@ -32,9 +32,13 @@ export function userFormValidation(formID, submitButton){
       input.classList.add("border-red-400");
       input.classList.remove("border-green-400");
     }
+    function displaySuccess(input) {
+      input.classList.remove("border-red-400");
+      input.classList.add("border-green-400");
+    }
     function validateName(name){
       const re = /^[A-Za-z0-9_]+$/;
-      return re.test(String(name));
+      return re.test(name);
     }
     function validateMail(email) {
       const re = /^[^@]+@(stud\.|)(noroff\.no)$/;
@@ -59,7 +63,7 @@ export function userFormValidation(formID, submitButton){
         nameMessage.innerText = "Please use _ to separate words";
         validation.name = false;
       }else{
-        currentInput.classList.add("border-green-400")
+        displaySuccess(currentInput)
         nameMessage.innerText = "";
         validation.name = true;
       }
@@ -70,7 +74,7 @@ export function userFormValidation(formID, submitButton){
         emailMessage.innerText = "Requires noroff email address";
         validation.email = false;
       }else{
-        currentInput.classList.add("border-green-400")
+        displaySuccess(currentInput)
         emailMessage.innerText = "";
         validation.email = true;
       }
@@ -81,21 +85,13 @@ export function userFormValidation(formID, submitButton){
         passwordMessage.innerText = "Must contain at least 8 letters";
         validation.password = false;
       }else{
-        currentInput.classList.add("border-green-400")
+        displaySuccess(currentInput)
         passwordMessage.innerText = "";
         validation.password = true;
       }
     }
     updateSubmitButton()
   });
-
-
-    cta.addEventListener("click", ()=> {
-      cta.innerText = "Submitting...";
-      // const fieldset = document.querySelector("fieldset");
-      // fieldset = disabled
-      
-    });
 
     cta.disabled = true;
 }

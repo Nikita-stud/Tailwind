@@ -2,9 +2,10 @@ import { loginUser } from "../../api/auth/loginUser.js";
 import { registerUser } from "../../api/auth/registerUser.js";
 import { createOwnPost } from "../../ui/auth/createOwmPosts.js";
 
-export function formHandler(formID, pathName){
+export function formHandler(formID, pathName, buttonID){
   //This line gets the ID of the Form
   const formRegister = document.querySelector(`${formID}`);
+  const cta = document.querySelector(`${buttonID}`);
   
 
     //This code gets the values from the Form of specific formID
@@ -18,6 +19,7 @@ export function formHandler(formID, pathName){
     //Depending on the pathName/endpoint the form values will be send to different forms
     if(pathName === "/register.html"){
       console.log("registerUser is being activated in formHandler")
+      cta.innerText = "Submitting...";
       registerUser(entries);
     }
     if(pathName === "/" || pathName === "/index.html"){

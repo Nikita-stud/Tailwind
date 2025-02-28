@@ -1,12 +1,16 @@
 import { API_LOGIN } from "../../constants/constants.js";
 import { saveLocalStorage } from "../../events/auth/saveLocalStorage.js";
+import { catchAndDisplay } from "../../ui/helpers/catchAndDisplay.mjs";
 
 export async function loginUser(user){
   const button = document.getElementById("loginButton");
   const fieldset = document.getElementById("fieldset");
+
+  fieldset.disabled = true;
+  button.innerText = "Logging in...";
+  let jsonValue = {};
+
   try{
-    fieldset.disabled = true;
-    button.innerText = "Logging in...";
     const postData ={
       method : "POST",
       headers: {
@@ -16,18 +20,20 @@ export async function loginUser(user){
     }
     const response = await fetch(API_LOGIN, postData);
     const json = await response.json();
-    const token = json.data.accessToken;
+    jsonValue= json;
 
+    if(!response.ok){
+      throw new Error(json.errors?.[0]?.message || "Registration failed");
+    }
+
+    const token = json.data.accessToken;
     if(token){
       saveLocalStorage('token', token);
       saveLocalStorage('email', user.email)
       document.location.href ="/feed";
     }
   }catch(error){
-    // if(!error){
-    //   throw new Error(json.errors?.[0]?.message || "Registration failed");
-    // }
-    console.log("This is the error:", error.message)
+    catchAndDisplay(`#errorContainer`, jsonValue.errors?.[0]?.message)
   }finally{
     fieldset.disabled = false;
     button.innerText = "LOGIN";

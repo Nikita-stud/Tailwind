@@ -2,7 +2,7 @@ import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 import { generateUniqueId } from "../../events/helpers/generateUniqueId.mjs";
 import { deletePost } from "../../events/posts/deletePost.mjs";
 import { editPost } from "../../events/posts/editPost.mjs";
-import { fetchSinglePost } from "../../ui/auth/fetchSinglePost.mjs";
+// import { fetchSinglePost } from "../../ui/auth/fetchSinglePost.mjs";
 
 export function createPosts(posts){
   const email = loadLocalStorage('email');
