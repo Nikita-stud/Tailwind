@@ -26,7 +26,6 @@ function pathEvents(){
         try{
           const postsObjects = await getPosts();
             createPosts(postsObjects.data);
-            console.log("This are all the Objects",postsObjects)
             filterPosts(postsObjects)
             searchPosts(postsObjects);
           }catch(error){

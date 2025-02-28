@@ -5,11 +5,9 @@ import { catchAndDisplay } from "../../ui/helpers/catchAndDisplay.mjs";
 export async function loginUser(user){
   const button = document.getElementById("loginButton");
   const fieldset = document.getElementById("fieldset");
-
   fieldset.disabled = true;
   button.innerText = "Logging in...";
   let jsonValue = {};
-
   try{
     const postData ={
       method : "POST",
