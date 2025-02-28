@@ -35,7 +35,7 @@ function pathEvents(){
         fetchPosts()
        break;
     case "/feed/post/":
-      fetchSinglePost()
+      fetchSinglePost();
       break;
   }
 }
