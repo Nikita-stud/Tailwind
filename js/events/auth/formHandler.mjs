@@ -1,6 +1,6 @@
-import { loginUser } from "../../api/auth/loginUser.js";
-import { registerUser } from "../../api/auth/registerUser.js";
-import { createOwnPost } from "../../ui/auth/createOwmPosts.js";
+import { loginUser } from "../../api/auth/loginUser.mjs";
+import { registerUser } from "../../api/auth/registerUser.mjs";
+import { createOwnPost } from "../../ui/auth/createOwmPosts.mjs";
 
 export function formHandler(formID, pathName, buttonID){
   //This line gets the ID of the Form

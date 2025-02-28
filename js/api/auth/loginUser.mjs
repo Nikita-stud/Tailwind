@@ -1,5 +1,5 @@
-import { API_LOGIN } from "../../constants/constants.js";
-import { saveLocalStorage } from "../../events/auth/saveLocalStorage.js";
+import { API_LOGIN } from "../../constants/constants.mjs";
+import { saveLocalStorage } from "../../events/auth/saveLocalStorage.mjs";
 import { catchAndDisplay } from "../../ui/helpers/catchAndDisplay.mjs";
 
 export async function loginUser(user){

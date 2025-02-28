@@ -1,4 +1,4 @@
-import { API_REGISTER } from "../../constants/constants.js";
+import { API_REGISTER } from "../../constants/constants.mjs";
 
 export async function registerUser(user){
   const postData ={

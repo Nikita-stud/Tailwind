@@ -1,6 +1,6 @@
 // import { createPosts } from "../../api/posts/createPost.mjs";
-import { API_POSTS } from "../../constants/constants.js";
-import { API_KEY } from "../../constants/tokens.js";
+import { API_POSTS } from "../../constants/constants.mjs";
+import { API_KEY } from "../../constants/tokens.mjs";
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 import { getQueryParam } from "../../events/helpers/getQueryParam.mjs";
 

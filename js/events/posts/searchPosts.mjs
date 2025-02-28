@@ -1,4 +1,4 @@
-import { createPosts } from "../../api/posts/createPosts.js";
+import { createPosts } from "../../api/posts/createPosts.mjs";
 
 export function searchPosts(posts){
   const form = document.getElementById("searchForm");

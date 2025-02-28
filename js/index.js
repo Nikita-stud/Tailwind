@@ -1,7 +1,7 @@
-import { formHandler } from "./events/auth/formHandler.js";
-import { userFormValidation } from "./ui/userFormValidation.js";
-import { createPosts } from "./api/posts/createPosts.js";
-import { getPosts } from "./api/posts/getPosts.js";
+import { formHandler } from "./events/auth/formHandler.mjs";
+import { userFormValidation } from "./ui/userFormValidation.mjs";
+import { createPosts } from "./api/posts/createPosts.mjs";
+import { getPosts } from "./api/posts/getPosts.mjs";
 import { searchPosts } from "./events/posts/searchPosts.mjs";
 import { filterPosts } from "./events/posts/filterPosts.mjs";
 import { fetchSinglePost } from "./ui/auth/fetchSinglePost.mjs";

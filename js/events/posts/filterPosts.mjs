@@ -1,4 +1,4 @@
-import { createPosts } from "../../api/posts/createPosts.js";
+import { createPosts } from "../../api/posts/createPosts.mjs";
 
 export function filterPosts(posts){
   const radioButtons = document.querySelectorAll("input[name=radio]");

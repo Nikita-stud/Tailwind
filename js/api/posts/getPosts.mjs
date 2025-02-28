@@ -1,5 +1,5 @@
-import { API_KEY } from "../../constants/tokens.js"
-import { API_POSTS } from "../../constants/constants.js";
+import { API_KEY } from "../../constants/tokens.mjs"
+import { API_POSTS } from "../../constants/constants.mjs";
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 
 export async function getPosts(){
