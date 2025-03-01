@@ -1,21 +1,15 @@
-import { API_KEY } from "../../constants/tokens.mjs"
 import { API_POSTS } from "../../constants/constants.mjs";
-import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
+import { createAllowedRequest } from "../../events/helpers/createAllowedRequest.mjs";
 
 export async function getPosts(){
   try{
-    const fetchPosts = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${loadLocalStorage('token')}`,
-        "X-Noroff-API-Key": API_KEY,
-      },
-    }
+    const fetchPosts = createAllowedRequest("GET")
       const response = await fetch(API_POSTS, fetchPosts);
       const json = await response.json();
+      if(!response.ok){
+        throw new Error(json.errors?.[0]?.message || "Getting Posts failed");
+      }
       return json;
-
   }catch(error){
       console.log(error)
     }

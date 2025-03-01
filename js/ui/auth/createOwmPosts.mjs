@@ -1,6 +1,6 @@
 import { API_POSTS } from "../../constants/constants.mjs";
-import { API_KEY } from "../../constants/tokens.mjs";
 import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
+import { createAllowedDataRequest } from "../../events/helpers/createAllowedDataRequest.mjs";
 
 export async function createOwnPost(postData){
   const email = loadLocalStorage('email');
@@ -16,17 +16,7 @@ export async function createOwnPost(postData){
         url: postData.image,
       };
     }
-  
-    const post = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${loadLocalStorage('token')}`,
-        "X-Noroff-API-Key": `${API_KEY}`,
-      },
-      body: JSON.stringify(bodyData),
-    }
-  
+    const post = createAllowedDataRequest("POST", bodyData);
     const fetched = await fetch(API_POSTS, post);
     const json = await fetched.json();
     location.reload();
