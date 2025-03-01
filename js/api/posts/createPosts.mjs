@@ -44,13 +44,13 @@ export function createPosts(posts){
       const deleteButton = document.createElement("button");
       deleteButton.setAttribute("id", ctaDeleteId);
       deleteButton.setAttribute("data-action", "delete");
-      deleteButton.classList.add("bg-slate-400", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
+      deleteButton.classList.add("bg-black", "text-white", "rounded-full", "px-8", "md:px-10", "mt-20", "py-2", "text-sm", "hover:bg-slate-800");
       deleteButton.innerText = "Delete";
 
       const editButton = document.createElement("button");
       editButton.setAttribute("id", ctaEditID);
       editButton.setAttribute("data-action", "edit");
-      editButton.classList.add("bg-slate-700", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
+      editButton.classList.add("bg-black", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
       editButton.innerText = "Edit Post";
       
       article.append(buttonContainer)
