@@ -8,8 +8,6 @@ import { fetchSinglePost } from "./ui/auth/fetchSinglePost.mjs";
 
 function pathEvents(){
   const pathName = window.location.pathname;
-
-  console.log(pathName);
   switch(pathName){
     case "/index.html":
     case "/":
@@ -21,7 +19,6 @@ function pathEvents(){
       break;
     case "/feed/":
       formHandler('#yourPostForm', pathName);
-
       const fetchPosts = async () =>{
         try{
           const postsObjects = await getPosts();

@@ -22,7 +22,7 @@ export async function createOwnPost(postData){
     location.reload();
     
     if(!fetched.ok){
-      throw new Error(json.errors?.[0]?.message || "Registration failed");
+      throw new Error(json.errors?.[0]?.message || "Creating own Post failed");
     }
   }catch(error){
     console.log(error)

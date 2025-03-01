@@ -15,7 +15,7 @@ export async function fetchSinglePost(){
     createPost(json);
     
     if(!response.ok){
-      throw new Error(json.errors?.[0]?.message);
+      throw new Error(json.errors?.[0]?.message || "Failed fetching the post");
     }
   }catch(error){
     console.log(error);
