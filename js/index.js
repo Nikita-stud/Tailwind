@@ -27,6 +27,9 @@ function pathEvents(){
             searchPosts(postsObjects);
           }catch(error){
             console.log(error)
+          }finally{
+            const loadingContainer = document.getElementById("loadingContainer");
+            loadingContainer.remove();
           }
         }
         fetchPosts()
@@ -38,69 +41,9 @@ function pathEvents(){
 }
 pathEvents();
 
+//PR pull request
 
+//The submission contains destructured objects and/or arrays.
 
-
-
-
-// //Additional features 
-
-// export function commentPost(){
-
-// }
-
-// export function editProfile(){
-
-// }
-
-// export function follow Unfollow(){
-
-// }
-
-// export function reactToPost(){
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-// export function handleCLick(event){
-//   const post = {id: event.target.dataset.id};
-//   const favoriteList = JSON.parse(localStorage.get("favorites")) || [];
-//   favoriteList.push(post);
-//   localStorage.setItem("favorites", JSON.stringify(favoriteList));
-// };
-
-
-//helper folder
-// export function getQueryParam(param){
-//   const queryString = document.location.search;
-//   const parameters = new URLSearchParams(queryString);
-//   const parameter = parameters.get(param);
-
-//   return parameter;
-// }
-
-//catch and display ui folder
-// export function catchAndDisplay(container="#jackets__container", message ="There was an unexpected error", messageType ="error"){
-//   const inside = document.querySelector(container);
-//   inside.innerHTML =`<div class="message ${messageType}">${message}</div>`;
-// }
-
-
-
-// const id = getQueryParam("id");
-// const jacketUrl = `${url}/${id}`;
-// if(!id){
-//   window.location.href="/";
-// }
-
-//add this to each article first of all
-/* <a href="details.html?id=${jacket.id}"> */
+//The candidate(s) has made effective use of planning tools 
+// to coordinate feature development. Adds it 

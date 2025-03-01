@@ -6,7 +6,6 @@ import { editPost } from "../../events/posts/editPost.mjs";
 export function createPosts(posts){
   const email = loadLocalStorage('email');
   const postsContainer = document.getElementById('posts_container')
-  // postsContainer.innerHTML="";
 
   for(let i=0; i < posts.length; i++ ){
     const article = document.createElement("article");
@@ -39,19 +38,19 @@ export function createPosts(posts){
       const ctaDeleteId = generateUniqueId();
       const ctaEditID = generateUniqueId();
       const buttonContainer = document.createElement("div");
-      buttonContainer.classList.add("flex", "justify-between");
+      buttonContainer.classList.add("flex", "justify-between", "mt-5");
 
       const deleteButton = document.createElement("button");
       deleteButton.setAttribute("id", ctaDeleteId);
       deleteButton.setAttribute("data-action", "delete");
-      deleteButton.classList.add("bg-black", "text-white", "rounded-full", "px-8", "md:px-10", "mt-20", "py-2", "text-sm", "hover:bg-slate-800");
-      deleteButton.innerText = "Delete";
+      deleteButton.classList.add("text-black", "font-semibold", "underline", "px-0", "md:px-10", "md:text-xl", "mt-10", "py-2");
+      deleteButton.innerHTML = `Delete <i class="fa-solid fa-trash text-sm pl-2"></i>`;
 
       const editButton = document.createElement("button");
       editButton.setAttribute("id", ctaEditID);
       editButton.setAttribute("data-action", "edit");
-      editButton.classList.add("bg-black", "text-white", "rounded-full", "px-8", "md:px-10", "mt-10", "py-2", "text-sm", "hover:bg-slate-800");
-      editButton.innerText = "Edit Post";
+      editButton.classList.add("text-black", "font-semibold", "underline", "px-0", "md:px-10", "md:text-xl", "mt-10", "py-2");
+      editButton.innerHTML =`Edit Post <i class="fa-solid fa-pen text-sm pl-2 mt-1"></i>`;
       
       article.append(buttonContainer)
       buttonContainer.append(deleteButton);
