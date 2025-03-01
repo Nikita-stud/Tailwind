@@ -21,7 +21,7 @@ function pathEvents(){
       formHandler('#yourPostForm', pathName);
       const fetchPosts = async () =>{
         try{
-          const postsObjects = await getPosts();
+            const postsObjects = await getPosts();
             createPosts(postsObjects.data);
             filterPosts(postsObjects)
             searchPosts(postsObjects);

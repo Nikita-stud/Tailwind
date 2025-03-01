@@ -1,8 +1,7 @@
 export function createPost(post){
   const postObject = post.data;
-  console.log("This is single post in Create Post:", postObject)
-
-  const postsContainer = document.getElementById('postContainer')
+  const postsContainer = document.getElementById('postContainer');
+  postsContainer.innerHTML = "";
 
   const article = document.createElement("article");
   article.classList.add("p-10", "w-100", "bg-slate-50", "shadow-md", "rounded-xl");

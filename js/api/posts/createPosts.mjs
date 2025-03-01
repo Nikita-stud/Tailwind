@@ -2,11 +2,11 @@ import { loadLocalStorage } from "../../events/auth/loadLocalStorage.mjs";
 import { generateUniqueId } from "../../events/helpers/generateUniqueId.mjs";
 import { deletePost } from "../../events/posts/deletePost.mjs";
 import { editPost } from "../../events/posts/editPost.mjs";
-// import { fetchSinglePost } from "../../ui/auth/fetchSinglePost.mjs";
 
 export function createPosts(posts){
   const email = loadLocalStorage('email');
   const postsContainer = document.getElementById('posts_container')
+  postsContainer.innerHTML="";
 
   for(let i=0; i < posts.length; i++ ){
     const article = document.createElement("article");
