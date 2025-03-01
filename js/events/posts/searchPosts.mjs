@@ -13,6 +13,8 @@ export function searchPosts(posts){
     const postsContainer = document.getElementById('posts_container')
     postsContainer.innerHTML = "";
 
+    console.log(filteredPosts.length)
+
     if(filteredPosts.length === 0){
       const article = document.createElement("article");
       article.classList.add("p-10", "w-100", "bg-slate-50", "shadow-md", "rounded-xl");

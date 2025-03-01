@@ -6,7 +6,7 @@ import { editPost } from "../../events/posts/editPost.mjs";
 export function createPosts(posts){
   const email = loadLocalStorage('email');
   const postsContainer = document.getElementById('posts_container')
-  postsContainer.innerHTML="";
+  // postsContainer.innerHTML="";
 
   for(let i=0; i < posts.length; i++ ){
     const article = document.createElement("article");
