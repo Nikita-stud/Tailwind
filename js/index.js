@@ -8,7 +8,6 @@ import { fetchSinglePost } from "./ui/auth/fetchSinglePost.mjs";
 
 function pathEvents(){
   const pathName = window.location.pathname;
-  console.log(pathName)
   switch(pathName){
     case "/index.html":
     case "/":
