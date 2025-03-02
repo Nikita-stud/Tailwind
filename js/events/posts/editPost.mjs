@@ -45,9 +45,9 @@ export async function editPost(buttonID){
                                 placeholder="What is on your mind?" 
                                 class="text-lg py-1 pl-5 outline shadow-md rounded-xl md:text-xl h-20">${text.innerText}</textarea>
                             </div>
-                            <div class="flex justify-end">
-                              <button type="button" id="cancelButton" class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Cancel</button>
-                              <button type="submit" class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Save</button>
+                            <div class="flex justify-between">
+                              <button type="button" id="cancelButton" class="bg-black text-white rounded-full px-8 md:px-8 py-2 text-xl hover:bg-slate-800">Cancel</button>
+                              <button type="submit" class="bg-black text-white rounded-full px-10 md:px-10 py-2 text-xl hover:bg-slate-800">Save</button>
                             </div>
                           </fieldset>
                         </form>`;
