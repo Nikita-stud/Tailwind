@@ -3,6 +3,37 @@ import { generateUniqueId } from "../../events/helpers/generateUniqueId.mjs";
 import { deletePost } from "../../events/posts/deletePost.mjs";
 import { editPost } from "../../events/posts/editPost.mjs";
 
+/**
+ * Creating all unfiltered Posts for feed page
+ * 
+ * @param {Object} posts Objects of 100 last posts
+ * 
+ * @example
+ * ```js
+ *  //looping through the post to create an article for each one 
+ * for(let i=0; i < posts.length; i++ )
+ * //Creating an article for each Object inside the container and adding all data needed
+ * postsContainer.append(article);
+ * article.append(title);
+ * article.append(img);
+ * article.append(text);
+ * //If there is a post I created, it will have my registered email in tags and add additional buttons
+ * const email = loadLocalStorage('email');
+ * const hasTag = posts[i].tags.includes(`${email}`);
+ *  if(hasTag)
+ * //The added buttons to my post will have a click event that will either delete or edit
+ * if(ifButton){
+ *      const buttonID = e.target.id;
+ *      const action = e.target.dataset.action;
+ *      if(action === "delete"){
+ *        deletePost(buttonID);
+ *      }else if(action === "edit"){
+ *        editPost(buttonID);
+ *      }
+ *    }
+ * ```
+ */
+
 export function createPosts(posts){
   const email = loadLocalStorage('email');
   const postsContainer = document.getElementById('posts_container')

@@ -1,3 +1,26 @@
+/**
+ * Creating a single Post that has been clicked on
+ * 
+ * @param {Object} post The Object contains post data
+ * 
+ * @example
+ * ```js
+ *  //Getting rid of loading indicator
+ * postsContainer.innerHTML = "";
+ * //Creating an article inside the container and adding all data needed
+ * postsContainer.append(article);
+ * article.append(title);
+ * article.append(img);
+ * article.append(text);
+ * article.append(comments);
+ * article.append(reactions);
+ * article.append(tags);
+ * article.append(time);
+ * ```
+ */
+
+
+
 export function createPost(post){
   const postObject = post.data;
   const postsContainer = document.getElementById('postContainer');
