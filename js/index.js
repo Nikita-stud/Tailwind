@@ -14,6 +14,7 @@ function pathEvents(){
       formHandler('#loginForm', pathName);
       break;
     case "/register.html":
+      case "/register":
       formHandler('#registerForm', pathName, '#submitRegister');
       userFormValidation('#registerForm', '#submitRegister');
       break;
