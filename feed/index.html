@@ -107,6 +107,7 @@
                   id="title" 
                   name="title" 
                   placeholder="Your title"
+                  required
                   class="text-lg py-1 pl-5 border-2 shadow-md rounded-xl md:text-xl"
                 />
               </div>
@@ -128,8 +129,10 @@
                   placeholder="What is on your mind?" 
                   class="text-lg py-1 pl-5 border-2 shadow-md rounded-xl md:text-xl h-20"></textarea>
               </div>
-              <div class="flex justify-end">
-                <button class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Post</button>
+              <div class="flex justify-between">
+                <div id="errorCreatePostContainer">
+                </div>
+                <button id="postButton" class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Post</button>
               </div>
             </fieldset>
           </form>

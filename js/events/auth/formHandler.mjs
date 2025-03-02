@@ -34,7 +34,6 @@ export function formHandler(formID, pathName, buttonID){
   
     const data =  new FormData(e.target);
     const entries =  Object.fromEntries(data.entries());
-    console.log(entries)
 
     if(pathName === "/register.html"){
       cta.innerText = "Submitting...";
@@ -46,6 +45,5 @@ export function formHandler(formID, pathName, buttonID){
     if(pathName ==="/feed/"){
       createOwnPost(entries);
     }
-
-  })
+  });
 }
