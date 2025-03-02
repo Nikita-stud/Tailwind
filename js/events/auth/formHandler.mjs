@@ -38,7 +38,7 @@ export function formHandler(formID, pathName, buttonID){
     const data =  new FormData(e.target);
     const entries =  Object.fromEntries(data.entries());
 
-    if(pathName === "/register.html"){
+    if(pathName === "/register.html" || pathName === "/register"){
       cta.innerText = "Submitting...";
       registerUser(entries);
     }
