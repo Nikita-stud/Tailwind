@@ -4,7 +4,6 @@ export function userFormValidation(formID, submitButton){
   const name = document.getElementById(`name`)
   const email = document.getElementById(`email`)
   const password = document.getElementById(`password`)
-
   const nameMessage = document.getElementById("nameMessage");
   const emailMessage = document.getElementById("emailMessage");
   const passwordMessage = document.getElementById("passwordMessage");
@@ -92,6 +91,5 @@ export function userFormValidation(formID, submitButton){
     }
     updateSubmitButton()
   });
-
     cta.disabled = true;
 }

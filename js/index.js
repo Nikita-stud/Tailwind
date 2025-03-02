@@ -40,10 +40,3 @@ function pathEvents(){
   }
 }
 pathEvents();
-
-//PR pull request
-
-//The submission contains destructured objects and/or arrays.
-
-//The candidate(s) has made effective use of planning tools 
-// to coordinate feature development. Adds it 
