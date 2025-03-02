@@ -14,6 +14,6 @@ export async function deletePost(buttonID){
     }
     location.reload();
   }catch(error){
-    console.log("Error deleting the post:", error)
+    window.alert("Error deleting the post")
   }
 }

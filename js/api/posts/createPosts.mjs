@@ -60,7 +60,7 @@ export function createPosts(posts){
       const article = e.target.closest("article");
       const ifButton = e.target.tagName === "BUTTON";
 
-      if(article && !ifButton){
+      if(article && !ifButton && !article.querySelector("#editPosts")){
         window.location.href =`/feed/post/?id=${article.id}`;
       }
 

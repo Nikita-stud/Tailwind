@@ -25,6 +25,6 @@ export async function createOwnPost(postData){
       throw new Error(json.errors?.[0]?.message || "Creating own Post failed");
     }
   }catch(error){
-    console.log(error)
+    window.alert("Creating own Post failed")
   }
 }

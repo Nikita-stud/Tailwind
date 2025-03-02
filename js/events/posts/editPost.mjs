@@ -47,7 +47,7 @@ export async function editPost(buttonID){
                             </div>
                             <div class="flex justify-end">
                               <button type="button" id="cancelButton" class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Cancel</button>
-                              <button type="submit" class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Edit</button>
+                              <button type="submit" class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Save</button>
                             </div>
                           </fieldset>
                         </form>`;
@@ -65,29 +65,34 @@ export async function editPost(buttonID){
     const img = editedForm.querySelector("#image").value;
     const body = editedForm.querySelector("#text").value;
 
+    const bodyData = {
+      title: title,
+        body: body,
+    };
+    if(img){
+      bodyData.media = {
+        url: img,
+      };
+    }
     const object = {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${loadLocalStorage('token')}`,
         "X-Noroff-API-Key": API_KEY,
-      },
-      body: JSON.stringify({
-        title: title,
-        body: body,
-        media: {
-          url: img,
-        }
-      })
-    }
+      }, 
+      body: JSON.stringify(bodyData),  
+    };
 
     try{
       const response = await fetch(`${API_POSTS}/${id}`, object);
       if(!response.ok){
         throw new Error("Did not manage to edit post")
       }
+      location.reload();
     }catch(error){
-      alert("Failed to update, try again");
+      console.log(error)
+      window.alert("Failed to update, try again");
     }
   });
 }
