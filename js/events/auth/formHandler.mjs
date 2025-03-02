@@ -9,6 +9,8 @@ import { createOwnPost } from "../../ui/auth/createOwmPosts.mjs";
  * @param {string} pathName The URL you are on
  * @param {string} buttonID Submit Button of form in question
  * 
+ * @example
+ * ```js
  * //When the form is submitted the values of inputs are stored 
  * const data =  new FormData(e.target);
  * const entries =  Object.fromEntries(data.entries());
@@ -23,6 +25,7 @@ import { createOwnPost } from "../../ui/auth/createOwmPosts.mjs";
  * if(pathName ==="/feed/"){
  *   createOwnPost(entries);
  * }
+ * ```
  */
 
 export function formHandler(formID, pathName, buttonID){
