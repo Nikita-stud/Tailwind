@@ -32,7 +32,7 @@ export async function registerUser(user){
     if(!response.ok){
       throw new Error(json.errors?.[0]?.message || "Registration failed");
     }else{
-      window.location.replace("/index.html")
+      window.location.replace("/")
     }
   }catch(error){
     catchAndDisplay(`#errorContainer`, jsonValue.errors?.[0]?.message)
