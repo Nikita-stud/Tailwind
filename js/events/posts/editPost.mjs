@@ -13,7 +13,7 @@ export async function editPost(buttonID){
 
   const originalHtml = article.innerHTML;
 
-  article.innerHTML = `<form action="#" id="editPosts" method="PUT" class="w-100 bg-slate-50 shadow-md rounded-xl">
+  article.innerHTML = `<form id="editPosts" method="PUT" class="w-100 bg-slate-50 shadow-md rounded-xl">
                           <fieldset class="mb-5 p-5 grid md:flex md:flex-col gap-5 text-2xl">
                             <div class="flex flex-col -mt-2">
                               <label for="title" class="pb-1 text-xl md:text-2xl">Change title</label>
@@ -59,6 +59,7 @@ export async function editPost(buttonID){
                         
   const editedForm = article.querySelector("#editPosts");
   editedForm.addEventListener("submit", async (e)=>{
+    e.preventDefault()
 
     const title = editedForm.querySelector("#title").value;
     const img = editedForm.querySelector("#image").value;
@@ -86,7 +87,7 @@ export async function editPost(buttonID){
         throw new Error("Did not manage to edit post")
       }
     }catch(error){
-      console.log("Error deleting the post:", error)
+      alert("Failed to update, try again");
     }
   });
 }
