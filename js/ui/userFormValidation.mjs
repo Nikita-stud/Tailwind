@@ -40,7 +40,7 @@ export function userFormValidation(formID, submitButton){
       return re.test(name);
     }
     function validateMail(email) {
-      const re = /^[^@]+@(stud\.|)(noroff\.no)$/;
+      const re = /^[^@]+@(stud\.)?noroff\.no$/;
       return re.test(String(email).toLowerCase());
     }
     
