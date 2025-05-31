@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/54f19440a6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/style.css"/>
+  <script type="module" src="../js/index.js"></script>
 </head>
 <body class="bg-gradient-to-b from-violet-300 to-orange-50 min-h-screen grid grid-rows-[auto_1fr_auto]">
   <header class="w-100 h-20 flex justify-between">
@@ -15,14 +16,8 @@
         <img src="../images/logo.png" alt="The logo of the page NOWOW">
       </a>
     </div>
-    <div class="w-100 p-5">
-      <form action="" method="POST">
-        <label for=""></label>
-        <input type="search" class="hidden md:block pl-5 h-10 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" placeholder="Search">
-      </form> 
-    </div>
     <div class="text-xl py-6 px-10 flex flex-row justify-end">
-      <nav class="">
+      <nav>
         <ul class="flex gap-5 pr-5">
           <li class="hidden md:block"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
           <li class="hidden md:block"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
@@ -32,15 +27,26 @@
     </div>
   </header>
 
-  <main class="">
-    <section class="px-10 md:flex md:gap-5 md:px-5 md:p">
-      <form action="" method="POST" class="flex">
-        <label for=""></label>
-        <input type="search" class="md:hidden pl-5 h-10 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-xl" placeholder="Search">
-      </form> 
+  <main>
+    <section class="px-10 md:flex md:gap-5 md:p md:pr-20 lg:px-10 lg:pr-20 xl:px-40 xl:py-10 2xl:py-20 2xl:px-80">
       <div>
+        <div class="mb-5">
+          <form id="searchForm">
+            <fieldset  class="flex align-middle justify-center">
+              <label for="search"><p class="hidden">Deleted</p></label>
+              <input 
+                type="search"
+                name="search"
+                id="search"
+                placeholder="What to find?"
+                class="block pl-5 lg:pr-0 2xl:pr-40 h-10 2xl:h-12 w-100 bg-slate-50 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" 
+              />
+              <button type="button" disabled class=" md:block -ml-10 text-lg px-10 2xl:-ml-20 bg-black text-slate-100 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </fieldset>
+          </form> 
+        </div>
         <div class="hidden md:block">
-          <div class="text-xl flex gap-5 md:text-2xl md:flex-col w-max p-10 shadow-md rounded-xl bg-slate-50">
+          <div class="text-xl flex gap-5 md:text-2xl md:flex-col p-10 2xl:pl-24 shadow-md rounded-xl bg-slate-50">
             <nav class="md:flex md:align-top">
               <ul class="flex md:flex-col gap-3">
                 <li><a href="#"><i class="fa-solid fa-book pr-1"></i> Feed</a></li>
@@ -58,49 +64,84 @@
           </div>
         </div>
         <div class="grid place-content-center mb-5 md:mb-0 text-xl mt-5 p-2 shadow-md rounded-xl bg-slate-50">
-          <form action="" method="POST" class="flex justify-between flex-col">
+          <form action="" id="radioFilter" method="POST" class="flex justify-between flex-col">
             <div>
-              <input type="radio" id="global" name="radio" class="w-4 h-4 border-black">
-              <label for="global" class="cursor-pointer">Global Posts</label>
-            </div>
-            <div>
-              <input type="radio" id="friends" name="radio" class="w-4 h-4 border-black">
-              <label for="friends" class="cursor-pointer">Friends Posts</label>
-            </div>
-            <div>
-              <input type="radio" id="todays" name="radio" class="w-4 h-4 border-black">
+              <input 
+              type="radio" 
+              id="todays" 
+              name="radio" 
+              class="w-4 h-4 border-black"
+              />
               <label for="todays" class="cursor-pointer">Todays Posts</label>
             </div>
+            <div>
+              <input 
+                type="radio" 
+                id="weeks" 
+                name="radio"
+                 class="w-4 h-4 border-black"
+              />
+              <label for="friends" class="cursor-pointer">This Weeks Posts</label>
+            </div>
+            <div>
+              <input 
+                type="radio" 
+                id="months" 
+                name="radio"
+                 class="w-4 h-4 border-black"
+              />
+              <label for="global" class="cursor-pointer">This Months Posts</label>
+            </div>
           </form>
         </div>
       </div>
 
-      <div class="w-100">
-
+      <div class="md:grow">
         <div>
-          <form action="" method="POST" class="grid md:flex gap-5 text-2xl mb-5 p-5 w-100 bg-slate-50 shadow-md rounded-xl">
-            <img src="../images/profile.jpg" alt="profile image of the user" class="hidden md:block w-14 h-14 rounded-full">
-            <textarea name="post" id="post" rows="1" cols="10" class="pb-10 md:pb-0 w-full pl-2 pt-3 rounded-xl bg-slate-50 border border-black" placeholder="What is on your mind George?"></textarea>
-            <button class="bg-black text-white rounded-full md:mt-20 px-10 py-2 text-xl hover:bg-slate-800">Post</button>
+          <form action="#" id="yourPostForm" method="POST" class="w-100 bg-slate-50 shadow-md rounded-xl">
+            <fieldset class="mb-5 p-5 grid md:flex md:flex-col gap-5 text-2xl">
+              <div class="flex flex-col -mt-2">
+                <label for="title" class="pb-1 text-xl md:text-2xl">Add relevant title</label>
+                <input 
+                  type="text" 
+                  id="title" 
+                  name="title" 
+                  placeholder="Your title"
+                  required
+                  class="text-lg py-1 pl-5 border-2 shadow-md rounded-xl md:text-xl"
+                />
+              </div>
+              <div class="flex flex-col -mt-2">
+                <label for="image" class="pb-1 text-xl md:text-2xl">Share your image</label>
+                <input 
+                  type="url" 
+                  id="image"
+                  name="image"
+                  placeholder="Add image URL here" 
+                  class="text-lg py-1 pl-5 border-2 shadow-md rounded-xl md:text-xl"
+                />
+              </div>
+              <div class="flex flex-col -mt-2">
+                <label for="text" class="pb-1 text-xl md:text-2xl">What is on your mind?</label>
+                <textarea 
+                  id="text"
+                  name="text"
+                  placeholder="What is on your mind?" 
+                  class="text-lg py-1 pl-5 border-2 shadow-md rounded-xl md:text-xl h-20"></textarea>
+              </div>
+              <div class="flex justify-between">
+                <div id="errorCreatePostContainer">
+                </div>
+                <button id="postButton" class="bg-black text-white rounded-full px-14 md:px-24 py-2 text-xl hover:bg-slate-800">Post</button>
+              </div>
+            </fieldset>
           </form>
         </div>
-
-        <div class="flex flex-col gap-5 ">
-          <article class="p-10 w-100 bg-slate-50 shadow-md rounded-xl">
-            <h3 class="text-2xl font-serif pb-5">Embrace the Journey</h3>
-            <img src="../images/post-img.jpg" alt="Image of the post" class="m-auto object-cover bg-no-repeat w-100 h-100 pb-5">
-            <p>Life is a beautiful tapestry woven from our experiences, both big and small. Every stumble and triumph shapes who we are and propels us forward. Remember, its not just the destination that matters, but the adventures and lessons learned along the way. So take that leap, explore new horizons, and cherish the moments that make your heart smile. Whats one journey youre grateful for today? Share it with us!</p>
-          </article>
-          <article class="p-10 w-100 font-serif bg-slate-50 shadow-md rounded-xl">
-            <h3 class="text-2xl pb-5">Embrace the Magic of Everyday Moments</h3>
-            <p>In our fast-paced lives, it's easy to overlook the beauty in the ordinary. Whether it's the warmth of a morning cup of coffee, the laughter shared with friends, or the vibrant colors of a sunset, these small moments have the power to fill our hearts with joy. Take a moment today to pause, breathe, and appreciate the magic that surrounds you. What little thing brings you joy today? Share in the comments!</p>
-          </article>
-          <article class="p-10 w-100 font-serif bg-slate-50 shadow-md rounded-xl">
-            <h3 class="text-2xl pb-5">Embracing Change</h3>
-            <p>Change is the only constant in life, yet it can be daunting. Whether its starting a new job, moving to a different city, or simply trying a new hobby, embracing change can lead to incredible growth and unexpected opportunities. Remember, every challenge is a chance to learn something new about yourself. So, the next time you face a shift in your routine, lean into it! What change are you embracing today? Share in the comments!</p>
-          </article>
-        </div>
+        <section id="posts_container" class="flex flex-col gap-5">
+        </section>
+        <div id="loadingContainer" class="w-100 animate-pulse flex justify-center rounded-xl align-middle py-20 border-4"><p class="animate-pulse">Loading Posts...</p></div>
       </div>
+
     </section>
   </main>
   <footer class="w-100 h-20 flex justify-end">

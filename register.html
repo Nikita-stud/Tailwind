@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CA | Authentication Page</title>
+  <meta name="description" content="This is the Authentication Page that is build as a task for Noroff University only using Frameworks or rather Tailwind. There are no functional links available">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css" />
+  <script type="module" src="js/index.js"></script>
+</head>
+<body class="min-h-screen grid grid-rows-[auto_1fr_auto] w-full h-full bg-no-repeat bg-cover" style="background-image: url('/images/aut-big.jpg');">
+  <header class="w-100 h-20 p-6">
+    <a href="/" class="w-fit h-fit">
+      <img src="images/logo.png" alt="The logo of the page NOWOW">
+    </a>
+  </header>
+  <main class="grid place-items-center">
+    <section class="">
+      <div class="w-full">
+        <h1 class="text-3xl font-sans flex justify-center pb-6" id="welcome_header">Register User</h1>
+        <div id="errorContainer" class="border-red-600 text-red-700 flex justify-center"></div>
+        <div id="register_container">
+          <fieldset id="fieldset">
+            <form class="flex flex-col" id="registerForm">
+              <div class="flex flex-col">
+                <label for="name"><span class="hidden">Delete</span></label>
+                <input 
+                  type="name" 
+                  id="name" 
+                  name="name" 
+                  placeholder="Name" 
+                  pattern="[A-Za-z0-9_]+"
+                  class="pl-5 h-10 w-100 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full">
+                  <div id="nameMessage" class=" w-100 mt-1 pl-5 -mb-3 text-red-500"></div>
+              </div>
+              <div class="flex flex-col">
+                <label for="email" class="mt-5"><span class="hidden">Delete</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="E-Mail" 
+                  title="Provide either stud.noroff.no or noroff.no email address" 
+                  class="pl-5 h-10 w-100 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full">
+                  <div id="emailMessage" class=" w-100 mt-1 pl-5 -mb-3 text-red-500"></div>
+              </div>
+              <div class="flex flex-col">
+                <label for="password" class="mt-5"><span class="hidden">Delete</span></label>
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  placeholder="Password"
+                  class="pl-5 h-10 w-100 border-solid border-2 focus:outline-none focus:border-slate-900 hover:cursor-pointer rounded-full" >
+                  <div id="passwordMessage" class=" w-100 mt-1 pl-5 -mb-3 text-red-500"></div>
+              </div>
+              <div class="flex">
+                <button type="submit" id="submitRegister" class="w-full mt-5 text-1xl h-10 bg-stone-600 cursor-pointer hover:bg-stone-400 text-white hover:text-slate-100 rounded-full">SIGN UP</button>
+              </div>
+          </fieldset>
+          </form>
+        </div>
+          <a href="/" class="flex justify-end">
+            <p class="underline text-xs text-blue pt-4 pr-4" id="create-acc">Sign in</p>
+          </a>
+      </div>
+    </section>
+  </main>
+  <footer class="w-100 h-20 p-6 flex justify-end">
+    <a href="/" class="w-fit h-fit">
+      <img src="images/logo.png" alt="The logo of the page NOWOW">
+    </a>
+  </footer>
+</body>
+</html>
